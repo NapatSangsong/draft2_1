@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GC Accolade</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link href="./assets/css/main.css" rel="stylesheet" />
+    <link href="./assets/fa-pro-6.0.0-web/css/all.min.css" rel="stylesheet" />
+    <link
+      href="./assets/kendoui.for.jquery.2022.1.119.commercial/styles/kendo.common-bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./assets/kendoui.for.jquery.2022.1.119.commercial/styles/kendo.bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#"
+        ><img src="./assets/images/gc-logo.png"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-clock-rotate-left" id="recent-icon"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#"
+                >Development of super high heat ABS for home appliance parts</a
+              >
+              <a class="dropdown-item" href="#"
+                >Toluene methylation process development</a
+              >
+              <a class="dropdown-item" href="#"
+                >A Simulation Model of Ethylene Oxide and Ethylene Glycol
+                Plant</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Own Initiatives</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Tasks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">All Initiatives</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Reports
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">System Report</a>
+              <a class="dropdown-item" href="#">Admin Report</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Admin</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search Initiatives"
+            aria-label="Search Initiatives"
+          />
+          <i class="fa-duotone fa-magnifying-glass"></i>
+          <div class="profile-menu">
+            <div class="profile-icon"></div>
+            <div class="profile-help">
+              <i class="fa-duotone fa-question"></i>
+            </div>
+          </div>
+        </form>
+      </div>
+    </nav>
+
+    <section class="container-fluid StageGate">
+      <div
+        class="row row-cols-12 g-2 justify-content-sm-between g-2 g-lg-3 StageGate-Detail"
+      >
+        <div class="col-sm">
+          <div class="p-1 text-uppercase StageGate-Detail-Header">
+            Initiative Name #1
+          </div>
+          <div class="StageGate-Detail-Show"></div>
+        </div>
+        <div class="col-sm">
+          <div class="p-1 text-uppercase StageGate-Detail-Header">
+            Initiative OWNER
+          </div>
+          <div class="StageGate-Detail-Show">CHATREE.D</div>
+        </div>
+        <div class="col-sm">
+          <div class="p-1 text-uppercase StageGate-Detail-Header">
+            PROJECT NO.
+          </div>
+          <div class="StageGate-Detail-Show">2021-007779</div>
+        </div>
+        <div class="col-sm">
+          <div class="p-1 text-uppercase StageGate-Detail-Header">
+            CURRENT STAGE
+          </div>
+          <div class="StageGate-Detail-Show">
+            Identify + Design & Cost Estimate + TLM Test 3 line (Napat)
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="p-1 text-uppercase StageGate-Detail-Header">
+            NEXT GATE
+          </div>
+          <div class="StageGate-Detail-Show">Execution</div>
+        </div>
+        <div class="col-sm">
+          <div class="p-1 text-uppercase StageGate-Detail-Header">
+            PROJECT ENGINEER
+          </div>
+          <div class="StageGate-Detail-Show">CHATREE.D</div>
+        </div>
+        <div class="col-sm">
+          <div class="p-1 text-capitalize StageGate-Detail-Header">STATUS</div>
+          <div class="StageGate-Detail-Show">
+            Prepare information for approval
+          </div>
+        </div>
+      </div>
+      <div class="row StageGate-bar">
+        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+          <div class="StageGate-item StageGate-item-Active">
+            <div>Idea Approval</div>
+            <div class="diamond"></div>
+          </div>
+          <div class="StageGate-bar-items-div-status">
+            <div class="StageGate-item-status StageGate-item-status-first">
+              Start<br />dd/MM/yyyy
+            </div>
+          </div>
+        </div>
+        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+          <div class="StageGate-item">
+            <div>Stage 0 <br />Idea Definition</div>
+            <div class="diamond"></div>
+          </div>
+          <div class="StageGate-bar-items-div-status">
+            <div class="StageGate-item-status">Gate 0 - Idea Definition</div>
+            <div class="StageGate-item-status">22/2/2022</div>
+          </div>
+        </div>
+        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+          <div class="StageGate-item">
+            <div>Stage 1<br />Scoping</div>
+            <div class="diamond"></div>
+          </div>
+          <div class="StageGate-bar-items-div-status">
+            <div class="StageGate-item-status">
+              Gate 1+2 - Scoping+Feasibility Study
+            </div>
+            <div class="StageGate-item-status">22/2/2022</div>
+          </div>
+        </div>
+        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+          <div class="StageGate-item">
+            <div>Stage 2<br />Feasibility Study</div>
+            <div class="diamond"></div>
+          </div>
+          <div class="StageGate-bar-items-div-status">
+            <div class="StageGate-item-status"></div>
+          </div>
+        </div>
+        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+          <div class="StageGate-item">
+            <div>Stage 3<br />Lab Scale</div>
+            <div class="diamond"></div>
+          </div>
+          <div class="StageGate-bar-items-div-status">
+            <div class="StageGate-item-status">Gate 3 - Lab Scale</div>
+          </div>
+        </div>
+        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+          <div class="StageGate-item">
+            <div>Stage 4<br />Scale Up</div>
+            <div class="diamond"></div>
+          </div>
+          <div class="StageGate-bar-items-div-status">
+            <div class="StageGate-item-status">Gate 4 - Scale Up</div>
+          </div>
+        </div>
+        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+          <div class="StageGate-item">
+            <div>Stage 5<br />Pre-Launch</div>
+            <div class="diamond"></div>
+          </div>
+          <div class="StageGate-bar-items-div-status">
+            <div class="StageGate-item-status">Gate 5 - Pre-Launch</div>
+          </div>
+        </div>
+        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+          <div class="StageGate-item">
+            <div>Post Launch Review</div>
+            <div class="diamond"></div>
+          </div>
+          <div class="StageGate-bar-items-div-status">
+            <div class="StageGate-item-status">Go To Launch</div>
+            <div class="StageGate-item-status StageGate-item-status-last">
+              End
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="row" id="body-row">
+        <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
+          <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+          <!-- Bootstrap List Group -->
+          <ul class="list-group">
+            <a
+              href="#submenu1"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="bg-dark list-group-item list-group-item-action flex-column align-items-start"
+            >
+              <div
+                class="d-flex w-100 justify-content-start align-items-center"
+              >
+                <span class="fa fa-dashboard fa-fw mr-3"></span>
+                <span class="menu-collapsed">Menu1</span>
+              </div>
+            </a>
+            <a
+              href="#submenu1"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="bg-dark list-group-item list-group-item-action flex-column align-items-start"
+            >
+              <div
+                class="d-flex w-100 justify-content-start align-items-center"
+              >
+                <span class="fa fa-dashboard fa-fw mr-3"></span>
+                <span class="menu-collapsed">Menu1</span>
+              </div>
+            </a>
+            <a
+              href="#top"
+              data-toggle="sidebar-colapse"
+              class="bg-dark list-group-item list-group-item-action d-flex align-items-center"
+            >
+              <div
+                class="d-flex w-100 justify-content-start align-items-center sidebar-collapsed"
+              >
+                <span id="collapse-icon" class="fa mr-3"></span>
+                <span id="collapse-text" class="menu-collapsed">Collapse</span>
+              </div>
+            </a>
+          </ul>
+          <!-- List Group END-->
+        </div>
+        <!-- sidebar-container END -->
+        <div class="col p-4 MainContent">Content</div>
+      </div>
+    </section>
+
+    <div class="setFontSize">
+      <ul id="font-fam-set">
+        <li>Prompt</li>
+        <li class="setFontActive">Kanit</li>
+      </ul>
+      <ul id="font-size-set">
+        <li class="setFontActive">12</li>
+        <li>14</li>
+        <li>16</li>
+        <li>18</li>
+      </ul>
+    </div>
+    <!--#############JS###############-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/kendoui.for.jquery.2022.1.119.commercial/js/kendo.all.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/information.js"></script>
+    <script src="./assets/js/sidebar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+.textEdit{
+    color:#007ac6;
+    font-size: 0.8em;
+    cursor: pointer;
+    text-decoration: underline;
+    padding:2px 2px 2px 2px;
+}
+.textEdit:hover{
+    color: #ffc800;
+    text-decoration: underline;
+    border-radius: 5px;
+}
+.k-grid-header th.k-header {
+    vertical-align: bottom;
+    cursor: default;
+    color: #007ac6;
+}
+.sep {
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+.viewBtn{
+    display:inline-block;
+    margin-right: 5px;
+     color:#007ac6;
+     cursor: pointer;
+     padding:2px 2px 2px 2px;
+}
+
+.viewBtn:hover {
+    color: #ffc800;
+    text-decoration: underline;
+}

@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GC Accolade</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link href="./assets/css/main.css" rel="stylesheet" />
+    <link href="./assets/fa-pro-6.0.0-web/css/all.min.css" rel="stylesheet" />
+    <link
+      href="./assets/kendoui.for.jquery.2022.1.119.commercial/styles/kendo.common-bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./assets/kendoui.for.jquery.2022.1.119.commercial/styles/kendo.bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#"
+        ><img src="./assets/images/gc-logo.png"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-clock-rotate-left" id="recent-icon"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00001</div>
+                <div class="initiativeShow">
+                  Development of super high heat ABS for home appliance parts
+                </div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00002</div>
+                <div class="initiativeShow">
+                  Toluene methylation process development
+                </div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00003</div>
+                <div class="initiativeShow">
+                  A Simulation Model of Ethylene Oxide and Ethylene Glycol Plant
+                </div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00004</div>
+                <div class="initiativeShow">Test Initiative #01</div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00005</div>
+                <div class="initiativeShow">Test Initiative #02</div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00006</div>
+                <div class="initiativeShow">Test Initiative #03</div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00007</div>
+                <div class="initiativeShow">Test Initiative #04</div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00008</div>
+                <div class="initiativeShow">Test Initiative #05</div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00009</div>
+                <div class="initiativeShow">Test Initiative #06</div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00010</div>
+                <div class="initiativeShow">Test Initiative #10</div></a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Own Initiatives</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Tasks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">All Initiatives</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Reports
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">System Report</a>
+              <a class="dropdown-item" href="#">Admin Report</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Admin</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search Initiatives"
+            aria-label="Search Initiatives"
+          />
+          <i class="fa-duotone fa-magnifying-glass"></i>
+          <div class="profile-menu">
+            <div class="profile-icon"></div>
+            <div class="profile-help">
+              <i class="fa-duotone fa-question"></i>
+            </div>
+          </div>
+        </form>
+      </div>
+    </nav>
+    <section>
+      <div class="container-fluid" style="background: #f9f9f9">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="content-title-bar">
+              <span class="content-title-bar-text">Initiative</span>
+              <span class="content-title-bar-icon"
+                ><i class="fa-duotone fa-angles-right"></i
+              ></span>
+              <span class="content-title-bar-text">New Initiative</span>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="content-bar-header">
+                    <span>Initiative Detail</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-7">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group content-form">
+                        <label
+                          for="exampleFormControlFile1"
+                          class="k-label k-input-label"
+                          >Initiative Name
+                          <span class="content-required">*</span></label
+                        >
+                        <input
+                          class="form-control form-control-sm k-textbox"
+                          type="text"
+                          placeholder=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Background
+                          <span class="content-required">*</span></label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="exampleFormControlTextarea1"
+                          rows="3"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Objectives
+                          <span class="content-required">*</span></label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="exampleFormControlTextarea1"
+                          rows="3"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Scope of Work
+                          <span class="content-required">*</span></label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="exampleFormControlTextarea1"
+                          rows="3"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Proposed Start Date <span class="content-required"
+                            >*</span
+                          ></label
+                        >
+                        <input
+                          class="form-control form-control-sm"
+                          id="Proposed-Start-Date"
+                          type="text"
+                          value=""
+                          placeholder=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Estimated Finish Date <span class="content-required"
+                            >*</span
+                          ></label
+                        >
+                        <input
+                          class="form-control form-control-sm"
+                          id="Estimated-Finish-Date"
+                          type="text"
+                          value=""
+                          placeholder=""
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-4"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1">Company <span class="content-required"
+                            >*</span
+                          ></label>
+                        <select id="Company" style="width: 100%">
+                          <option>PTTGC</option>
+                          <option>PTT</option>
+                          <option>PTTPM</option>
+                          <option>TOP</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Organization <span class="content-required"
+                            >*</span
+                          >
+                        </label>
+                        <select id="Organization" style="width: 100%">
+                          <option>Organization 1</option>
+                          <option>Organization 2</option>
+                          <option>Organization 3</option>
+                          <option>Organization 4</option>
+                        </select>
+                        <span class="specifictext"
+                          >(Specify Asset Owner for CAPEX project or Initiative
+                          Owner for non-CAPEX project)</span
+                        >
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Main Plant / Location <span class="content-required"
+                            >*</span
+                          ></label
+                        >
+                        <select id="Location" style="width: 100%">
+                          <option>Location 1</option>
+                          <option>Location 2</option>
+                          <option>Location 3</option>
+                          <option>Location 4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group content-form">
+                        <label
+                          for="exampleFormControlFile1"
+                          style="display: inline-block"
+                          >Initiative Creator</label
+                        >
+                        <span class="peopleName" style="display: inline-block"></span>
+                          : John &lt;S S-PS-SP/12334&gt;</span
+                        >
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group content-form">
+                        <label
+                          for="exampleFormControlFile1"
+                          style="display: inline-block"
+                          >Register Date</label
+                        >
+                        <span class="peopleName" style="display: inline-block"
+                          >: 01/02/2022</span
+                        >
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Initiative Owner<span class="content-required"
+                            >*</span
+                          ></label
+                        >
+                        <select
+                          id="Initiative-Owner"
+                          multiple="multiple"
+                          data-placeholder="Select attendees..."
+                          style="width: 100%"
+                        >
+                          <option>Steven White &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Nancy King &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Nancy Davolio &lt;S S-PS-SP/12334&gt;</option>
+                          <option>
+                            Robert Davolio &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Michael Leverling &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Andrew Callahan &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Michael Suyama &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>Anne King &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Laura Peacock &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Robert Fuller &lt;S S-PS-SP/12334&gt;</option>
+                          <option selected>
+                            Janet White &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Nancy Leverling &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Robert Buchanan &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Margaret Buchanan &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>Andrew Fuller &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Anne Davolio &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Andrew Suyama &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Nige Buchanan &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Laura Fuller &lt;S S-PS-SP/12334&gt;</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Co-Developers</label
+                        >
+                        <select
+                          id="Co-Developers"
+                          multiple="multiple"
+                          data-placeholder="Select attendees..."
+                        >
+                          <option>Steven White &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Nancy King &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Nancy Davolio &lt;S S-PS-SP/12334&gt;</option>
+                          <option selected>
+                            Robert Davolio &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Michael Leverling &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Andrew Callahan &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option selected>
+                            Michael Suyama &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>Anne King &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Laura Peacock &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Robert Fuller &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Janet White &lt;S S-PS-SP/12334&gt;</option>
+                          <option>
+                            Nancy Leverling &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Robert Buchanan &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Margaret Buchanan &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option selected>
+                            Andrew Fuller &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>Anne Davolio &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Andrew Suyama &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Nige Buchanan &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Laura Fuller &lt;S S-PS-SP/12334&gt;</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1">Viewers</label>
+                        <select
+                          id="Stakeholders"
+                          multiple="multiple"
+                          data-placeholder="Select attendees..."
+                        >
+                          <option>Steven White &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Nancy King &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Nancy Davolio &lt;S S-PS-SP/12334&gt;</option>
+                          <option selected>
+                            Robert Davolio &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Michael Leverling &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Andrew Callahan &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Michael Suyama &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>Anne King &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Laura Peacock &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Robert Fuller &lt;S S-PS-SP/12334&gt;</option>
+                          <option selected>
+                            Janet White &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Nancy Leverling &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Robert Buchanan &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>
+                            Margaret Buchanan &lt;S S-PS-SP/12334&gt;
+                          </option>
+                          <option>Andrew Fuller &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Anne Davolio &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Andrew Suyama &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Nige Buchanan &lt;S S-PS-SP/12334&gt;</option>
+                          <option>Laura Fuller &lt;S S-PS-SP/12334&gt;</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="sep-content">
+              <div class="row">
+                <div class="col-auto">
+                  <div class="form-group content-form">
+                    <label for="exampleFormControlFile1">Request OPEX</label>
+                    <div class="checkbox-content">
+                      <div class="switchBar"><input id="switch1" /></div>
+                      <!-- <input type="checkbox" id="eq3" class="k-checkbox k-checkbox-md k-rounded-md"> -->
+
+                      <label class="k-checkbox-label" for="eq3"
+                        >OPEX is required</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="form-group content-form">
+                    <label for="exampleFormControlFile1"
+                      >Estimated OPEX Cost</label
+                    >
+                    <input
+                      class="form-control form-control-sm numerictextbox"
+                      type="text"
+                      value="123456789.00"
+                      placeholder=""
+                      style="width: 180px; display: inline-block"
+                    />
+                    <select
+                      id="EstimateOPEXCost"
+                      style="width: 100px; display: inline-block"
+                    >
+                      <option>MTHB</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="form-group content-form">
+                    <label for="exampleFormControlFile1" style="width: 100%"
+                      >&nbsp;</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="sep-content">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="content-bar-header">
+                    <span>Benefits</span>
+                  </div>
+                </div>
+                <div class="col-sm-8">
+                 <div id="GridBenefit"></div> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="">
+          <div class="col-sm-12">
+            <div class="sep-content">
+              <div class="form-group content-form">
+                <label for="exampleFormControlFile1"
+                  >Has Financial Benefit</label
+                >
+                <div class="checkbox-content">
+                  <!-- <input type="checkbox" id="eq3" class="k-checkbox k-checkbox-md k-rounded-md"> -->
+                  <div class="switchBar"><input id="switch2" /></div>
+                  <label class="k-checkbox-label" for="switch2"
+                    >This project has financial benefit</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12"></div>
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-auto col-tlm1">
+                <div class="form-group content-form">
+                  <label for="exampleFormControlFile1">Direct Benefit</label>
+                  <input
+                    class="form-control form-control-sm numerictextbox"
+                    type="text"
+                    value="100"
+                    placeholder=""
+                    disabled
+                    style="width: 120px"
+                  />
+                  <label for="exampleFormControlFile1 "
+                    >Direct Benefit Payback (years)</label
+                  >
+                  <input
+                    class="form-control form-control-sm numerictextbox"
+                    type="text"
+                    value=""
+                    placeholder=""
+                    disabled
+                    style="width: 120px"
+                  />
+                </div>
+              </div>
+              <div class="col-auto col-tlm1">
+                <div class="form-group content-form">
+                  <label for="exampleFormControlFile1">Indirect Benefit</label>
+                  <input
+                    class="form-control form-control-sm numerictextbox"
+                    type="text"
+                    value="10"
+                    placeholder=""
+                    disabled
+                    style="width: 120px"
+                  />
+                </div>
+              </div>
+
+              <div class="col-auto col-tlm1">
+                <div class="form-group content-form">
+                  <label for="exampleFormControlFile1"
+                    >FTE Saving Direct Benefit</label
+                  >
+                  <input
+                    class="form-control form-control-sm numerictextbox"
+                    type="text"
+                    value="0"
+                    placeholder=""
+                    disabled
+                    style="width: 120px"
+                  />
+                </div>
+              </div>
+              <div class="col-auto col-tlm1">
+                <div class="form-group content-form">
+                  <label for="exampleFormControlFile1"
+                    >Manhour Saving Indirect Benefit</label
+                  >
+                  <input
+                    class="form-control form-control-sm numerictextbox"
+                    type="text"
+                    value="0"
+                    placeholder=""
+                    disabled
+                    style="width: 120px"
+                  />
+                </div>
+              </div>
+              <div class="col-auto col-tlm1 col-tlm1-last">
+                <div class="form-group content-form">
+                  <label for="exampleFormControlFile1" style="display: block"
+                    >Total Benefit</label
+                  >
+                  <input
+                    class="form-control form-control-sm numerictextbox"
+                    type="text"
+                    value="80"
+                    placeholder=""
+                    disabled
+                    style="width: 120px; display: inline-block"
+                  />
+                  <div style="display: inline-block">MTHB / Year</div>
+
+                  <label for="exampleFormControlFile1" style="display: block"
+                    >Total Benefit Payback(years)</label
+                  >
+                  <input
+                    class="form-control form-control-sm numerictextbox"
+                    type="text"
+                    value="0"
+                    placeholder=""
+                    disabled
+                    style="width: 120px; display: inline-block"
+                  />
+                  <div style="display: inline-block">MTHB / Year</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12" style="display: none">
+            <div class="row mgt10">
+              <div class="col-sm-3"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="sep-content2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mgt20">
+          <div class="col-sm-12">
+            <div class="sep-content2">
+              <div class="form-group content-form">
+                <button type="submit" class="btn btn-primary">
+                  <i class="fa-duotone fa-radar"></i> Suggest Process
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="content-bar-header mgt20">
+              <span>Suggestion Process</span>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group content-form">
+              <input
+                type="radio"
+                name="engine"
+                id="engine1"
+                class="k-radio k-radio-md"
+                checked="checked"
+              />
+              <label class="k-radio-label" for="engine1">R&D</label>
+            </div>
+          </div>
+          <div class="col-sm-12 mgt20">
+            <button type="submit" class="btn btn-primary">
+              <i class="fa-duotone fa-arrow-right"></i> NEXT
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="sep-content2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="setFontSize">
+      <ul id="font-fam-set">
+        <li>Prompt</li>
+        <li class="setFontActive">Kanit</li>
+      </ul>
+      <ul id="font-size-set">
+        <li class="setFontActive">12</li>
+        <li>14</li>
+        <li>16</li>
+        <li>18</li>
+      </ul>
+    </div>
+    <!--#############JS###############-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/kendoui.for.jquery.2022.1.119.commercial/js/kendo.all.min.js"></script>
+    <script src="./assets/js/tlm.global.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/sampleData.js"></script>
+    <script src="./assets/js/information.js"></script>
+  </body>
+</html>
