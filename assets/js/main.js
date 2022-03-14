@@ -31,14 +31,18 @@ $("document").ready(function () {
 
 function calStageGate() {
   $(".StageGate-item-status").each(function (i, v) {
-    var w = Math.floor($(this).width() / 2);
-    w += 20;
+    var w = Math.floor($(this).width() / 2) + 10;
     $(this).css("margin-left", -w);
   });
 
-  $("  .StageGate-item-status-last").each(function (i, v) {
+  $(".StageGate-item-status-last").each(function (i, v) {
     var w = Math.floor($(this).width() / 2);
     $(this).css("right", -w);
+  });
+
+  $(".StageGate-item-status-first").each(function (i, v) {
+    var w = Math.floor($(this).width() / 2);
+    $(this).css("margin-left", "0px");
   });
 }
 

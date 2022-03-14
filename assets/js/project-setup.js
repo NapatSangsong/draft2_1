@@ -61,26 +61,29 @@ $("document").ready(function () {
         field: "Year",
         title: "Year",
         width: "80px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:Year' class='dateSelectEdit' /></span>",
+        editor: KPIYearDateEditor,
+
+        template: "<span>#: kendo.toString(Year, 'yyyy') # </span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:Year' class='dateSelectEdit' /></span>",
       },
       {
         field: "KPI",
         title: "KPI",
         width: "130px",
         editor: KPIDropDownEditor,
-        // template: "#=KPI.KPIName#",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:KPI.KPIName' class='ddlTestEdit' /></span>",
+        template: "#=KPI.KPIName#",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:KPI.KPIName' class='ddlTestEdit' /></span>",
       },
       {
         field: "KPIType",
         title: "KPI Type",
         width: "130px",
         editor: KPITypeDropDownEditor,
-        // template: "#=KPIType.KPITypeName#",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:KPIType.KPITypeNam' class='ddlTestEdit' /></span>",
+        template: "#=KPIType.KPITypeName#",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:KPIType.KPITypeNam' class='ddlTestEdit' /></span>",
       },
       {
         field: "ProposedTypeName",
@@ -88,45 +91,50 @@ $("document").ready(function () {
         width: "200px",
         editor: ProposedTypeDropDownEditor,
         // template: "#=ProposedType.ProposedTypeName#",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:ProposedTypeName' class='ddlTestEdit' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:ProposedTypeName' class='ddlTestEdit' /></span>",
       },
       {
         field: "TargetDate",
         title: "Target Date",
         width: "120px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:TargetDate' class='dateSelectEdit' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:TargetDate' class='dateSelectEdit' /></span>",
       },
       {
         field: "AchievementDate",
         title: "Achievement Date",
         width: "120px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:AchievementDate' class='dateSelectEdit' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:AchievementDate' class='dateSelectEdit' /></span>",
       },
       {
         field: "Note",
         title: "Note",
         width: "130px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:Note' class='k-input-inner' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:Note' class='k-input-inner' /></span>",
       },
       {
         field: "CommercialGrade",
         title: "Commercial Grade",
         width: "130px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:CommercialGrade' class='k-input-inner' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:CommercialGrade' class='k-input-inner' /></span>",
       },
       {
         field: "CustomerFeedback",
         title: "Customer Feedback",
         width: "130px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:CustomerFeedback' class='k-input-inner' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:CustomerFeedback' class='k-input-inner' /></span>",
       },
-      { command: ["destroy"], title: " ", width: "80px" },
+      {
+        field: "",
+        title: " ",
+        width: "25px",
+        template: '<i class="fa-solid fa-trash-can"></i>',
+      },
     ],
   });
   $("#GridEcoDesignTemplate").kendoGrid({
@@ -154,7 +162,7 @@ $("document").ready(function () {
       {
         field: "",
         title: "",
-        width: "60px",
+        width: "42px",
         template: "<div class='k-button'>UPLOAD</div>",
       },
       {
@@ -167,7 +175,12 @@ $("document").ready(function () {
         title: "Revision",
         width: "80px",
       },
-      { command: ["destroy"], title: " ", width: "90px" },
+      {
+        field: "",
+        title: " ",
+        width: "25px",
+        template: '<i class="fa-solid fa-trash-can"></i>',
+      },
     ],
   });
   $("#GridMaterial").kendoGrid({
@@ -192,55 +205,79 @@ $("document").ready(function () {
         field: "Year",
         title: "Year",
         width: "100px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:Year' class='dateSelectEditMaterial' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:Year' class='dateSelectEditMaterial' /></span>",
       },
       {
         field: "MaterialA",
         title: "Material A (%)",
         width: "130px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:MaterialA' class='k-input-inner' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:MaterialA' class='k-input-inner' /></span>",
       },
       {
         field: "MaterialB",
         title: "Material B (%)",
         width: "130px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:MaterialB' class='k-input-inner' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:MaterialB' class='k-input-inner' /></span>",
       },
       {
         field: "kgCO2eq",
         title: "kg CO2eq",
         width: "130px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:kgCO2eq' class='k-input-inner' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:kgCO2eq' class='k-input-inner' /></span>",
       },
       {
         field: "ClimateChangeEcosystem",
         title: "Climate Change Ecosystem",
         width: "180px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:ClimateChangeEcosystem' class='k-input-inner' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:ClimateChangeEcosystem' class='k-input-inner' /></span>",
       },
       {
         field: "FossilDepletion",
         title: "Fossil Depletion",
         width: "130px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:FossilDepletion' class='k-input-inner' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:FossilDepletion' class='k-input-inner' /></span>",
       },
       {
         field: "EnvironmentalImpact",
         title: "Environmental Impact",
         width: "150px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:EnvironmentalImpact' class='k-input-inner' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:EnvironmentalImpact' class='k-input-inner' /></span>",
       },
 
-      { command: ["destroy"], title: " ", width: "100px" },
+      {
+        field: "",
+        title: " ",
+        width: "25px",
+        template: '<i class="fa-solid fa-trash-can"></i>',
+      },
     ],
   });
+
+  function deleteItemKPI(e) {
+    e.preventDefault();
+
+    var grid = $("#GridKPI").data("kendoGrid");
+    var row = $(e.currentTarget).closest("tr");
+    var dataItem = this.dataItem(row);
+    grid.removeRow(row);
+  }
+  function deleteItem(e) {
+    e.preventDefault();
+
+    var grid = $("#grid").data("kendoGrid");
+    var row = $(e.currentTarget).closest("tr");
+    var dataItem = this.dataItem(row);
+    if (grid.dataSource.total() > 70) {
+      grid.removeRow(row);
+    }
+  }
   $("#GridHistoryLog").kendoGrid({
     dataSource: {
       data: HistoryLogData,
@@ -291,7 +328,15 @@ $("document").ready(function () {
 
   $(".multiselectTest").kendoMultiSelect().data("kendoMultiSelect");
 });
-
+function KPIYearDateEditor(container, options) {
+  $('<input required name="' + options.field + '"/>')
+    .appendTo(container)
+    .kendoDatePicker({
+      start: "decade",
+      depth: "decade",
+      format: "yyyy",
+    });
+}
 function KPIDropDownEditor(container, options) {
   $('<input required name="' + options.field + '"/>')
     .appendTo(container)
@@ -325,7 +370,7 @@ function ProposedTypeDropDownEditor(container, options) {
 }
 
 function onKPIDataBound(e) {
-  KPIeditAll();
+  //KPIeditAll();
 }
 function onMaterialDataBound(e) {
   MaterialeditAll();

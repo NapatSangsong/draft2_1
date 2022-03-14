@@ -23,10 +23,11 @@
 
     /* gradient colors */
     --bg-gradient: linear-gradient(to right, #ff512f, #dd2476);
-    --bg-gradient-indio: linear-gradient(to right, #007ac6, #00cfec);
+    /* --bg-gradient-indio: linear-gradient(to right, #007ac6, #00cfec); */
+      --bg-gradient-indio: linear-gradient(to right, #00cfec, #007ac6);
     --bg-gradient-peach: linear-gradient(to right, #ff7f3, #fff7f3);
 
-    --font-main-size:12px;
+    --font-main-size:14px;
 
 
     *>* {
@@ -65,7 +66,8 @@ nav {
     font-size: 1em !important;
 }
 .dropdown-menu.show {
-    max-width: 800px;
+    max-width: 80vw;
+    width: 80vw;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -127,9 +129,10 @@ a.navbar-brand {
 
 .initiativeShow:before {
     /* border: 1px solid; */
-    content: '\3a';
-    font-family: 'Font Awesome 6 Pro';
-    margin-right: 9px;
+    /* content: '\3a';
+    font-family: 'Font Awesome 6 Pro'; */
+    content: ':';
+    margin-right: 5px;
 }
 
 a.dropdown-item {
@@ -912,6 +915,10 @@ section {
     text-align: center;
 
 }
+.StageGate-item-status:hover{
+     color: #ffffff;
+    background-color: #007ac6;
+}
 
 .StageGate-item-status-last {
     position: absolute;
@@ -935,6 +942,7 @@ section {
     font-weight: 300;
     margin-bottom: 5px;
     margin-left: 0px;
+    line-height: 1.2em;
 }
 
 .StageGate-item-Active {
@@ -943,7 +951,7 @@ section {
 }
 
 .StageGate-bar {
-    padding-left: 70px;
+    padding-left: 25px;
     padding-right: 50px;
     display: flex;
     flex-direction: row;
@@ -961,7 +969,7 @@ section {
 .StageGate-Detail-Header {
     font-size: 13px;
     color: #7398c4;
-    
+    /* color:#385980; */
     font-weight: 600;
 }
 
@@ -973,6 +981,7 @@ section {
     /* border: 1px solid red; */
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    min-width: 200px;
 }
 
 .StageGate-bar-items-div:last-child>.StageGate-item {
@@ -1362,6 +1371,21 @@ input.form-control.form-control-sm:not(.k-input-inner) {
     margin-bottom: 5px;
     /* background: red; */
 }
+.k-grid-header th.k-header {
+    vertical-align: bottom;
+    cursor: default;
+    color: #007ac6;
+}
+
+.k-grid .k-column-title {
+    min-width: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    overflow: hidden;
+    color: #007ac6;
+}
 /*############ /custom kendo ################*/
 
 /*############ custom tlm ################*/
@@ -1400,7 +1424,7 @@ span.peopleName {
 }
 
 button.btn.btn-primary.btn-gc {
-    background: #d1e8f7 !important;
+    background: #ffffff !important;
     border-color: #007ac6 !important;
     color: #007ac6 !important;
     font-weight: 300;
@@ -1410,6 +1434,7 @@ button.btn.btn-primary.btn-gc {
 button.btn.btn-primary {
     font-weight: 300;
     font-size: var(--font-main-size);
+    border-radius: 10px;
 }
 
 .setFontSize{
@@ -1419,7 +1444,12 @@ button.btn.btn-primary {
     z-index: 10000;
 }
 .setFontSize ul>li {
-    display: inline;
+    display: inline;.textarea {
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 1px 6px;
+}
     padding: 5px;
     background: #1991eb;
     border-radius: 2px;
@@ -1441,3 +1471,39 @@ button.btn.btn-primary {
    padding:0px;
 }
 /* /Panel */
+
+
+/* Input */
+.textarea {
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 1px 6px;
+}
+.textarea {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    resize: both;
+    min-height: 6em;
+    line-height: 1em;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.textarea[contenteditable]:empty::before {
+    content: "";
+    color: gray;
+}
+.textareaOneLine{
+     min-height: 1em;
+     line-height: 1em;
+}
+/* /Input */
+
+
+.numberRight {
+    width: 100%;
+    text-align: right;
+}

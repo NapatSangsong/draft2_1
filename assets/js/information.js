@@ -96,45 +96,49 @@ $("document").ready(function () {
       {
         field: "Benefit",
         title: "Benefit <span class='content-required'>*</span>",
-        width: "150px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:Benefit' class='k-textbox k-input' /></span>",
+        width: "250px",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:Benefit' class='k-textbox k-input' /></span>",
       },
       {
-        field: "KPI",
+        field: "BenefitType",
         title: "Type",
-        width: "150px",
-        // editor: KPIDropDownEditor,
-        // template: "#=KPI.KPIName#",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:KPI.KPIName' class='ddlTestEdit' /></span>",
+        width: "250px",
+        //editor: KPIDropDownEditor,
+        //template: "#=KPIType.KPITypeName#",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:KPI.KPIName' class='ddlTestEdit' /></span>",
       },
       {
         field: "BenefitTarget",
         title: "Target (Description) <span class='content-required'>*</span>",
-        width: "150px",
+        width: "300px",
         // editor: KPITypeDropDownEditor,
         // template: "#=KPIType.KPITypeName#",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:BenefitTarget' class='ddlTestEdit' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:BenefitTarget' class='ddlTestEdit' /></span>",
       },
       {
         field: "BenefitPlan",
         title: "Plan (MTHB) <span class='content-required'>*</span>",
-        width: "100px",
+        width: "120px",
         // editor: ProposedTypeDropDownEditor,
-        // template: "#=ProposedType.ProposedTypeName#",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:BenefitPlan' class='k-textbox k-input' /></span>",
+        template: "<div class='numberRight'>#=BenefitPlan#</div>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:BenefitPlan' class='k-textbox k-input' /></span>",
       },
       {
         field: "BenefitDetail",
         title: "Detail",
-        width: "200px",
-        template:
-          "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:BenefitDetail' class='k-textbox k-input' /></span>",
+        // template:
+        //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:BenefitDetail' class='k-textbox k-input' /></span>",
       },
-      { command: ["destroy"], title: " ", width: "80px" },
+      {
+        field: "",
+        title: " ",
+        width: "25px",
+        template: '<i class="fa-solid fa-trash-can"></i>',
+      },
     ],
   });
 });
@@ -156,7 +160,7 @@ function Page_Init() {
 }
 
 function onBenefitDataBound(e) {
-  BenefireditAll();
+  //BenefireditAll();
 }
 
 function BenefireditAll() {

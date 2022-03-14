@@ -10,11 +10,7 @@
     text-decoration: underline;
     border-radius: 5px;
 }
-.k-grid-header th.k-header {
-    vertical-align: bottom;
-    cursor: default;
-    color: #007ac6;
-}
+
 .sep {
     border-bottom: 1px solid #efefef;
     padding-bottom: 5px;
