@@ -162,7 +162,7 @@ $("document").ready(function () {
       {
         field: "",
         title: "",
-        width: "42px",
+        width: "50px",
         template: "<div class='k-button'>UPLOAD</div>",
       },
       {
@@ -178,7 +178,7 @@ $("document").ready(function () {
       {
         field: "",
         title: " ",
-        width: "25px",
+        width: "30px",
         template: '<i class="fa-solid fa-trash-can"></i>',
       },
     ],
@@ -254,7 +254,7 @@ $("document").ready(function () {
       {
         field: "",
         title: " ",
-        width: "25px",
+        width: "30px",
         template: '<i class="fa-solid fa-trash-can"></i>',
       },
     ],
@@ -306,22 +306,27 @@ $("document").ready(function () {
       {
         field: "Revision",
         title: "Revision",
+        width: "100px",
       },
       {
         field: "Action",
         title: "Action",
+        width: "100px",
       },
       {
         field: "Detail",
         title: "Detail",
+        width: "300px",
       },
       {
         field: "From",
         title: "From",
+        width: "180px",
       },
       {
         field: "To",
         title: "To",
+        width: "180px",
       },
     ],
   });

@@ -664,7 +664,7 @@ form.form-inline.my-2.my-lg-0 {
 
 .download-content-row2 {
     padding-top: 20px;
-    transition: height 400ms ease;
+    /* transition: height 400ms ease; */
 
     display: none;
 }
