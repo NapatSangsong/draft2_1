@@ -270,6 +270,7 @@ var BenefitData = [
     BenefitTarget: "200 Ton/Year xxxxx",
     BenefitPlan: "70",
     BenefitDetail: "Demo",
+    isDelete: false,
   },
   {
     Benefit: "FTE Saving",
@@ -277,6 +278,7 @@ var BenefitData = [
     BenefitTarget: "2 FTE/year",
     BenefitPlan: "710",
     BenefitDetail: "Demo",
+    isDelete: false,
   },
   {
     Benefit: "Environment",
@@ -284,26 +286,6 @@ var BenefitData = [
     BenefitTarget: "Reduce CO2 xxx/year",
     BenefitPlan: "",
     BenefitDetail: "Demo",
-  },
-  {
-    Benefit: "Safety",
-    BenefitType: "Non Financial",
-    BenefitTarget: "TLM1",
-    BenefitPlan: "",
-    BenefitDetail: "Demo",
-  },
-  {
-    Benefit: "Law and Regulation",
-    BenefitType: "Non Financial",
-    BenefitTarget: "TLM2",
-    BenefitPlan: "",
-    BenefitDetail: "Demo",
-  },
-  {
-    Benefit: "Law and Regulation",
-    BenefitType: "Non Financial",
-    BenefitTarget: "TLM3",
-    BenefitPlan: "",
-    BenefitDetail: "Demo",
+    isDelete: false,
   },
 ];

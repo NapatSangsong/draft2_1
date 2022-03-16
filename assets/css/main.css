@@ -23,8 +23,8 @@
 
     /* gradient colors */
     --bg-gradient: linear-gradient(to right, #ff512f, #dd2476);
-    /* --bg-gradient-indio: linear-gradient(to right, #007ac6, #00cfec); */
-      --bg-gradient-indio: linear-gradient(to right, #00cfec, #007ac6);
+    --bg-gradient-indio: linear-gradient(to right, #007ac6, #00cfec);
+      /* --bg-gradient-indio: linear-gradient(to right, #00cfec, #007ac6); */
     --bg-gradient-peach: linear-gradient(to right, #ff7f3, #fff7f3);
 
     --font-main-size:14px;
@@ -855,6 +855,7 @@ section {
     border-right: 1px solid var(--text-light);
     color: #007ac6;
     background-color: rgb(227, 227, 227);
+    min-width: 150px;
 
 }
 
@@ -913,6 +914,7 @@ section {
     /* margin-left: -25px; */
     max-width: 180px;
     text-align: center;
+    box-sizing: content-box;
 
 }
 .StageGate-item-status:hover{
@@ -1169,7 +1171,7 @@ section {
 .content-bar-header {
     padding: 10px;
     background: var(--bg-gradient-indio);
-    border-radius: 5px;
+    border-radius: 15px;
     color: var(--text-white);
     font-size: 1em;
     margin-bottom: 15px;
@@ -1434,7 +1436,7 @@ button.btn.btn-primary.btn-gc {
 button.btn.btn-primary {
     font-weight: 300;
     font-size: var(--font-main-size);
-    border-radius: 10px;
+
 }
 
 .setFontSize{
@@ -1507,3 +1509,15 @@ button.btn.btn-primary {
     width: 100%;
     text-align: right;
 }
+
+
+/* rd opex info */
+.copyIcon{
+    margin-left: 5px;
+    color: #007ac6;
+    cursor: pointer;
+}
+.copyIcon:hover{
+    color: orange;
+}
+/* rd opex info */

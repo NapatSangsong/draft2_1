@@ -1,6 +1,22 @@
 let _dataItem;
+var dataSourceBenefit = new kendo.data.DataSource({
+  data: BenefitData,
+});
 $("document").ready(function () {
   // Page_Init();
+
+  $("#BenefitAdd").click(function () {
+    var grid = $("#GridBenefit").data("kendoGrid");
+    grid.addRow({
+      Benefit: "Increase Production",
+      BenefitType: "Direct",
+      BenefitTarget: "200 Ton/Year xxxxx",
+      BenefitPlan: "70",
+      BenefitDetail: "Demo",
+      isDelete: true,
+    });
+    return false;
+  });
   $("#Proposed-Start-Date").kendoDatePicker({
     format: "dd/MM/yyyy",
   });
@@ -75,13 +91,17 @@ $("document").ready(function () {
     spinners: false,
   });
 
+  dataSourceBenefit.read();
+
   $("#GridBenefit").kendoGrid({
     dataSource: {
-      data: BenefitData,
+      data: dataSourceBenefit.data(),
       schema: {
         model: {
           fields: {
-            Year: { type: "string" },
+            Benefit: { type: "string" },
+            BenefitPlan: { type: "string" },
+            isDelete: { type: "boolean" },
           },
         },
       },
@@ -90,7 +110,9 @@ $("document").ready(function () {
     scrollable: true,
     sortable: false,
     filterable: false,
-    editable: true,
+    editable: {
+      createAt: "bottom",
+    },
     dataBound: onBenefitDataBound,
     columns: [
       {
@@ -136,8 +158,9 @@ $("document").ready(function () {
       {
         field: "",
         title: " ",
-        width: "25px",
-        template: '<i class="fa-solid fa-trash-can"></i>',
+        width: "50px",
+        template:
+          "#if(isDelete){# <i class='fa-solid fa-trash-can'></i>#}else{#  #}#",
       },
     ],
   });
