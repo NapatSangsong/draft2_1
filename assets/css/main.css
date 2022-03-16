@@ -1020,8 +1020,8 @@ section {
     font-size: 12px;
     border-top-right-radius: 5px;
     overflow: hidden;
-
-    transition: width 0.5s;
+    /* transition: width 0.5s;
+    transition-timing-function: ease-in-out; */
 }
 
 /* Sidebar sizes when expanded and expanded */
@@ -1134,7 +1134,7 @@ section {
     }
 
     50% {
-        transform: scale(1.2, 1.2);
+        transform: scale(1.4, 1.4);
     }
 
     100% {
