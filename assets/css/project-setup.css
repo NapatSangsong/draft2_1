@@ -34,33 +34,6 @@
     text-decoration: underline;
 }
 
-.StageGate-Detail-Header.InitiativeName {
-    font-size: 1.2em;
-    color: var(--bg-gc);
-    font-weight: 400;
-}
-.setGate{
-    position: fixed;
-    bottom: 50px;
-    right: 150px;
-    text-align: center;
-}
-.setGate ul{
-    list-style-type: none;
-    padding: 0px;
-    margin: 0px;
-}
-
-.setGate li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 5px;
-    background-color: #1991eb;
-    font-size:11px;
-    color: #ffffff;
-    border-radius: 5px;
-    cursor: pointer;
-}
 .noRecDiv {
     text-align: center;
     width: 100%;

@@ -1038,7 +1038,7 @@ section {
     color: white;
     background: var(--bg-gc) !important;
     border: none;
-    font-size: 18px;
+    font-size: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -1090,11 +1090,57 @@ section {
 
 
 .menu-collapsed {
-    padding-left: 10px;
+    /* padding-left: 10px; */
     font-size: 14px;
     font-weight: 200;
 }
 
+.sidebarActive {
+   
+    position: absolute;
+    top: 2px;
+    left: 34px;
+    font-size: 13px;
+    border-radius: 50%;
+    text-align: center;
+  
+}
+
+#sidebar-container .list-group a:hover {
+   
+    background: rgba(248, 248, 248,9) !important;
+    border-radius: 0px;
+    color:#007ac6;
+    /* Needed for IEs */
+
+    -moz-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    -webkit-box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3, MakeShadow=true, ShadowOpacity=0.30);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+    zoom: 1;
+}
+
+.zoom-in-out-box {
+    animation: zoom-in-zoom-out 1s ease infinite;
+
+     color:var(--text-red);
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
 /*############ /Body+SideBar ################*/
 
 
@@ -1599,3 +1645,34 @@ button.btn.btn-primary {
 }
 
 /* /P Kong */
+
+
+.StageGate-Detail-Header.InitiativeName {
+    font-size: 1.2em;
+    color: var(--bg-gc);
+    font-weight: 400;
+}
+
+.setGate {
+    position: fixed;
+    bottom: 50px;
+    right: 150px;
+    text-align: center;
+}
+
+.setGate ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.setGate li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+    background-color: #1991eb;
+    font-size: 11px;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
