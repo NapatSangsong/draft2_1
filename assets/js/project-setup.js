@@ -1,5 +1,8 @@
 let _dataItem;
 $("document").ready(function () {
+  $("#SubmitProjectSetup").click(function () {
+    SubmitProjectSetupInfo();
+  });
   $("#switch1").kendoSwitch({
     messages: {
       checked: "YES",
@@ -19,7 +22,55 @@ $("document").ready(function () {
     },
   });
   // Page_Init();
-  $(".ddlTest").kendoDropDownList();
+  $("#ProjectType").kendoDropDownList({
+    dataTextField: "",
+    dataValueField: "",
+    filter: "contains",
+    suggest: true,
+    index: -1,
+    dataSource: ["New product", "Improvement", "Market Defending"],
+  });
+  $("#BusinessUnit").kendoDropDownList({
+    dataTextField: "",
+    dataValueField: "",
+    filter: "contains",
+    suggest: true,
+    index: -1,
+    dataSource: ["GGC", "EOB", "PHN", "DYCT"],
+  });
+  $("#Application").kendoDropDownList({
+    dataTextField: "",
+    dataValueField: "",
+    filter: "contains",
+    suggest: true,
+    index: -1,
+    dataSource: [
+      "Flexible Packaging",
+      "Cap & Closure",
+      "Electrical Housing",
+      "Wire & Cable",
+      "Coating & Painting",
+      "Epoxy Composite",
+      "Rotomolding",
+      "Pipe",
+      "Others",
+      "Interior & Exterior Part",
+      "Film",
+      "Large Blow & Solar Floating",
+    ],
+  });
+  $("#IndustrySegmentation").kendoDropDownList({
+    dataTextField: "",
+    dataValueField: "",
+    filter: "contains",
+    suggest: true,
+    index: -1,
+    dataSource: ["Packaging", "Construction", "E&E", "Automotive"],
+  });
+  $(".ddlTest").kendoDropDownList({
+    index: -1,
+    filter: "contains",
+  });
   $("#eq1").kendoCheckBox({
     checked: true,
     label: "Yes/No",
@@ -38,7 +89,11 @@ $("document").ready(function () {
   $(".dateSelect").kendoDatePicker({
     format: "dd/MM/yyyy",
   });
-
+  $("#KPIAdd").click(function () {
+    var grid = $("#GridKPI").data("kendoGrid");
+    grid.addRow();
+    return false;
+  });
   $("#GridKPI").kendoGrid({
     dataSource: {
       data: KPIData,
@@ -46,6 +101,14 @@ $("document").ready(function () {
         model: {
           fields: {
             Year: { type: "string" },
+            KPI: { Value: { type: "string" } },
+            KPIType: { Value: { type: "string" } },
+            ProposedTypeName: { Value: { type: "string" } },
+            TargetDate: { type: "date" },
+            AchievementDate: { type: "date" },
+            Note: { type: "string" },
+            CommercialGrade: { type: "string" },
+            CustomerFeedback: { type: "string" },
           },
         },
       },
@@ -54,8 +117,18 @@ $("document").ready(function () {
     scrollable: true,
     sortable: false,
     filterable: false,
-    editable: true,
+    editable: {
+      createAt: "bottom",
+    },
     dataBound: onKPIDataBound,
+    edit: function (e) {
+      var dropdown = e.container
+        .find("[data-role=dropdownlist]")
+        .data("kendoDropDownList");
+      if (dropdown) {
+        dropdown.open();
+      }
+    },
     columns: [
       {
         field: "Year",
@@ -63,7 +136,7 @@ $("document").ready(function () {
         width: "80px",
         editor: KPIYearDateEditor,
 
-        template: "<span>#: kendo.toString(Year, 'yyyy') # </span>",
+        template: "<span>#: kendo.toString(new Date(Year), 'yyyy') # </span>",
         // template:
         //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:Year' class='dateSelectEdit' /></span>",
       },
@@ -72,7 +145,16 @@ $("document").ready(function () {
         title: "KPI",
         width: "130px",
         editor: KPIDropDownEditor,
-        template: "#=KPI.KPIName#",
+        //template: "#=KPI.KPIName#",
+        template: function (dataItem) {
+          if (dataItem && dataItem.KPI.Value) {
+            return dataItem.KPI.Value;
+          } else if (dataItem && dataItem.KPI != "") {
+            return dataItem.KPI;
+          } else {
+            return "";
+          }
+        },
         // template:
         //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:KPI.KPIName' class='ddlTestEdit' /></span>",
       },
@@ -81,7 +163,15 @@ $("document").ready(function () {
         title: "KPI Type",
         width: "130px",
         editor: KPITypeDropDownEditor,
-        template: "#=KPIType.KPITypeName#",
+        template: function (dataItem) {
+          if (dataItem && dataItem.KPIType.Value) {
+            return dataItem.KPIType.Value;
+          } else if (dataItem && dataItem.KPIType != "") {
+            return dataItem.KPIType;
+          } else {
+            return "";
+          }
+        },
         // template:
         //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:KPIType.KPITypeNam' class='ddlTestEdit' /></span>",
       },
@@ -90,6 +180,15 @@ $("document").ready(function () {
         title: "Proposed / Committed / Additional",
         width: "200px",
         editor: ProposedTypeDropDownEditor,
+        template: function (dataItem) {
+          if (dataItem && dataItem.ProposedTypeName.Value) {
+            return dataItem.ProposedTypeName.Value;
+          } else if (dataItem && dataItem.ProposedTypeName != "") {
+            return dataItem.ProposedTypeName;
+          } else {
+            return "";
+          }
+        },
         // template: "#=ProposedType.ProposedTypeName#",
         // template:
         //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:ProposedTypeName' class='ddlTestEdit' /></span>",
@@ -98,6 +197,9 @@ $("document").ready(function () {
         field: "TargetDate",
         title: "Target Date",
         width: "120px",
+        editor: TargetDateEditor,
+        template:
+          "<span>#: kendo.toString(new Date(TargetDate), 'dd/MM/yyyy') # </span>",
         // template:
         //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:TargetDate' class='dateSelectEdit' /></span>",
       },
@@ -105,6 +207,9 @@ $("document").ready(function () {
         field: "AchievementDate",
         title: "Achievement Date",
         width: "120px",
+        editor: AchievementDateEditor,
+        template:
+          "<span>#: kendo.toString(new Date(AchievementDate), 'dd/MM/yyyy') # </span>",
         // template:
         //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:AchievementDate' class='dateSelectEdit' /></span>",
       },
@@ -132,8 +237,16 @@ $("document").ready(function () {
       {
         field: "",
         title: " ",
-        width: "25px",
-        template: '<i class="fa-solid fa-trash-can"></i>',
+        width: "50px",
+        // template:
+        //   "#if(isDelete){# <a style='text-align: center;'><i class='fa-regular fa-trash k-grid-delete' style='cursor: pointer'></i></a>#}else{#  #}#",
+        template:
+          "<a style='text-align: center;'><i class='fa-regular fa-trash k-grid-delete' style='cursor: pointer'></i></a>",
+        click: function (e) {
+          e.preventDefault();
+          var tr = $(e.target).closest("tr");
+          $("#GridKPI").data("kendoGrid").removeRow(tr);
+        },
       },
     ],
   });
@@ -143,7 +256,7 @@ $("document").ready(function () {
       schema: {
         model: {
           fields: {
-            Year: { type: "string" },
+            Template: { type: "string" },
           },
         },
       },
@@ -152,7 +265,13 @@ $("document").ready(function () {
     scrollable: true,
     sortable: false,
     filterable: false,
-    editable: true,
+    noRecords: {
+      template:
+        "<div class='noRecDiv'>There is no select Eco Design Criteria.</div>",
+    },
+    editable: {
+      createAt: "bottom",
+    },
     columns: [
       {
         field: "Template",
@@ -175,12 +294,12 @@ $("document").ready(function () {
         title: "Revision",
         width: "80px",
       },
-      {
-        field: "",
-        title: " ",
-        width: "30px",
-        template: '<i class="fa-solid fa-trash-can"></i>',
-      },
+      // {
+      //   field: "",
+      //   title: " ",
+      //   width: "30px",
+      //   template: '<i class="fa-solid fa-trash-can"></i>',
+      // },
     ],
   });
   $("#GridMaterial").kendoGrid({
@@ -254,8 +373,16 @@ $("document").ready(function () {
       {
         field: "",
         title: " ",
-        width: "30px",
-        template: '<i class="fa-solid fa-trash-can"></i>',
+        width: "50px",
+        // template:
+        //   "#if(isDelete){# <a style='text-align: center;'><i class='fa-regular fa-trash k-grid-delete' style='cursor: pointer'></i></a>#}else{#  #}#",
+        template:
+          "<a style='text-align: center;'><i class='fa-regular fa-trash k-grid-delete' style='cursor: pointer'></i></a>",
+        click: function (e) {
+          e.preventDefault();
+          var tr = $(e.target).closest("tr");
+          $("#GridBenefit").data("kendoGrid").removeRow(tr);
+        },
       },
     ],
   });
@@ -332,6 +459,36 @@ $("document").ready(function () {
   });
 
   $(".multiselectTest").kendoMultiSelect().data("kendoMultiSelect");
+  $("#EcoDesignCriteria").kendoMultiSelect({
+    deselect: function (e) {
+      debugger;
+      var dataItem = e.dataItem;
+      var item = e.item;
+      var grid = $("#GridEcoDesignTemplate").data("kendoGrid");
+      $(grid.dataSource.data()).each(function (i, x) {
+        if (dataItem.text == x.Template) {
+          grid.dataSource.remove(x);
+        }
+      });
+
+      // Use the deselected data item or jQuery item
+    },
+    select: function (e) {
+      var item = e.item;
+      var text = item.text();
+      var grid = $("#GridEcoDesignTemplate").data("kendoGrid");
+      var newRow = {
+        Template: text,
+      };
+      grid.dataSource.add(newRow);
+      // Use the selected item or its text
+    },
+    change: function (e) {
+      var value = this.value();
+
+      // Use the value of the widget
+    },
+  });
 });
 function KPIYearDateEditor(container, options) {
   $('<input required name="' + options.field + '"/>')
@@ -342,35 +499,88 @@ function KPIYearDateEditor(container, options) {
       format: "yyyy",
     });
 }
-function KPIDropDownEditor(container, options) {
+function TargetDateEditor(container, options) {
   $('<input required name="' + options.field + '"/>')
     .appendTo(container)
+    .kendoDatePicker({
+      start: "",
+      depth: "",
+      format: "dd/MM/yyyy",
+    });
+}
+function AchievementDateEditor(container, options) {
+  $('<input required name="' + options.field + '"/>')
+    .appendTo(container)
+    .kendoDatePicker({
+      start: "",
+      depth: "",
+      format: "dd/MM/yyyy",
+    });
+}
+
+function KPIDropDownEditor(container, options) {
+  // "Prototype", "Spec In", "Commercial", "Enabling Know How";
+  $(
+    '<input id="' +
+      options.field +
+      '" data-bind="value:' +
+      options.field +
+      '"/>'
+  )
+    .appendTo(container)
     .kendoDropDownList({
-      autoBind: false,
-      dataTextField: "",
-      dataValueField: "",
-      dataSource: ["Prototype", "Spec In", "Commercial", "Enabling Know How"],
+      dataSource: [
+        { Value: "Prototype" },
+        { Value: "Spec In" },
+        { Value: "Commercial" },
+        { Value: "Enabling Know How" },
+      ],
+      autoBind: true,
+      dataTextField: "Value",
+      dataValueField: "Value",
     });
 }
 function KPITypeDropDownEditor(container, options) {
-  $('<input required name="' + options.field + '"/>')
+  // "Prototype", "Spec In", "Commercial", "Enabling Know How";
+  $(
+    '<input id="' +
+      options.field +
+      '" data-bind="value:' +
+      options.field +
+      '"/>'
+  )
     .appendTo(container)
     .kendoDropDownList({
-      autoBind: false,
-      dataTextField: "",
-      dataValueField: "",
-      dataSource: ["Process", "Product", "N/A"],
+      dataSource: [
+        { Value: "Process" },
+        { Value: "Product" },
+        { Value: "N/A" },
+      ],
+      autoBind: true,
+      dataTextField: "Value",
+      dataValueField: "Value",
     });
 }
 
 function ProposedTypeDropDownEditor(container, options) {
-  $('<input required name="' + options.field + '"/>')
+  // "Prototype", "Spec In", "Commercial", "Enabling Know How";
+  $(
+    '<input id="' +
+      options.field +
+      '" data-bind="value:' +
+      options.field +
+      '"/>'
+  )
     .appendTo(container)
     .kendoDropDownList({
-      autoBind: false,
-      dataTextField: "",
-      dataValueField: "",
-      dataSource: ["Proposed", "Committed", "Additional"],
+      dataSource: [
+        { Value: "Proposed" },
+        { Value: "Committed" },
+        { Value: "Additional" },
+      ],
+      autoBind: true,
+      dataTextField: "Value",
+      dataValueField: "Value",
     });
 }
 
@@ -409,4 +619,39 @@ function MaterialeditAll() {
   $(".dateSelectEditMaterial").kendoDatePicker({
     format: "dd/MM/yyyy",
   });
+}
+function SubmitProjectSetupInfo() {
+  //validate
+  debugger;
+  let Background = $("#Background").text();
+  let Objectives = $("#Objectives").text();
+  let ScopeOfWork = $("#ScopeOfWork").text();
+  $("#ValidateSummaryUL").html("");
+  if (Background == "") {
+    $("#ValidateSummaryUL").append(
+      ' <li><div data-field="" style="cursor: pointer;" class="itemValidate" div-id="InitiativeNameData">Background is required</div>'
+    );
+  }
+  if (Objectives == "") {
+    $("#ValidateSummaryUL").append(
+      ' <li><div data-field="" style="cursor: pointer;" class="itemValidate" div-id="InitiativeNameData">Objectives is required</div>'
+    );
+  }
+  if (ScopeOfWork == "") {
+    $("#ValidateSummaryUL").append(
+      ' <li><div data-field="" style="cursor: pointer;" class="itemValidate" div-id="InitiativeNameData">Scope Of Work is required</div>'
+    );
+  }
+  if (ScopeOfWork == "" || Objectives == "" || ScopeOfWork == "") {
+    $("#ValidateSummary").fadeIn();
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $("#ValidateSummary").offset().top,
+      },
+      2000
+    );
+  }
+
+  GoUpToValidate();
+  //submit
 }

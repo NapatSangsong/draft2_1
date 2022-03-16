@@ -385,8 +385,10 @@
                       class="ddlTest"
                       id="EstimateOPEXCost"
                       style="width: 100px; display: inline-block"
+                      disabled
                     >
                       <option>MTHB</option>
+                      <option>THB</option>
                     </select>
                   </div>
                 </div>
@@ -401,6 +403,7 @@
                       value=""
                       placeholder=""
                       style="width: 180px; display: inline-block"
+                      id="RevenueData"
                     />
                     <div style="display: inline-block; width: 25px"></div>
                     <select
@@ -409,6 +412,7 @@
                       style="width: 100px; display: inline-block"
                     >
                       <option>MTHB</option>
+                      <option>THB</option>
                     </select>
                   </div>
                 </div>
@@ -423,6 +427,7 @@
                       value=""
                       placeholder=""
                       style="width: 180px; display: inline-block"
+                      id="EBITDAData"
                     />
                     <div style="display: inline-block; width: 25px"></div>
                     <select
@@ -431,6 +436,7 @@
                       style="width: 100px; display: inline-block"
                     >
                       <option>MTHB</option>
+                      <option>THB</option>
                     </select>
                   </div>
                 </div>
@@ -445,6 +451,7 @@
                       value=""
                       placeholder=""
                       style="width: 180px; display: inline-block"
+                      id="EBITDAUpliftData"
                     />
                     <div style="display: inline-block; width: 25px"></div>
                     <select
@@ -453,6 +460,7 @@
                       style="width: 100px; display: inline-block"
                     >
                       <option>MTHB</option>
+                      <option>THB</option>
                     </select>
                   </div>
                 </div>
@@ -473,13 +481,28 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-lg-3 col-sm-12">
-                  <input
+                <div class="col-lg-6 col-sm-12">
+                  <!-- <input
                     name="files"
                     id="files"
                     type="file"
                     aria-label="files"
+                  /> -->
+                  <button
+                    type="button"
+                    id="btnCustomUpload"
+                    style="width: 120px"
+                  >
+                    Upload
+                  </button>
+
+                  <input
+                    type="file"
+                    id="btnUpload"
+                    name="btnUploadEconomicTemplete"
+                    style="visibility: hidden; height: 1px; width: 1px"
                   />
+                  <div id="dvAttachmentList" class="attachment-list"></div>
                 </div>
               </div>
             </div>
@@ -489,16 +512,22 @@
           <div class="col-sm-12">
             <div class="sep-content2">
               <div class="form-group content-form">
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-primary" id="SaveDraftBTN">
                   Save Draft
                 </button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" id="SubmitBTN">
+                  Submit
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="container-fluid" style="background: #f9f9f9">
+      <div
+        class="container-fluid"
+        id="ValidateSummary"
+        style="background: #f9f9f9; display: none"
+      >
         <div class="row">
           <div class="col-sm-12">
             <div class="">
@@ -567,5 +596,37 @@
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/sampleData.js"></script>
     <script src="./assets/js/rd-opex-info.js"></script>
+    <script id="template-attachmentlist" type="text/x-kendo-template">
+      # var fileNameNoExtension = name.replace(/\.[^/.]+$/, "");#
+      # var fileNameNoExtension;#
+      <div class="container nogutter">
+      <div class="row align-items-center">
+      <div class="col-sm-3 pe-0">
+      <a href="\\#">#=name#</a>
+      </div>
+      <div class="col-sm-3 pe-0" >
+      <input class="attachment-textbox" type="text" value="#=fileNameNoExtension#" />
+      </div>
+      <div class="col-auto">
+      <a class="k-delete-button" style='text-align: left; color: \\#000'><i class='fa-regular fa-trash k-grid-delete' style='cursor: pointer'></i></a>
+      </div>
+      </div>
+      </div>
+    </script>
+    <style>
+      .k-upload {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+      }
+      div#dvAttachmentList {
+        /* overflow: hidden; */
+        margin-top: 5px;
+      }
+
+      .k-listview-content {
+        overflow: hidden;
+      }
+    </style>
   </body>
 </html>

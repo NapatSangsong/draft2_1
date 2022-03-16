@@ -1,15 +1,9 @@
 var KPIData = [
   {
     Year: "2022",
-    KPI: {
-      KPIID: 1,
-      KPIName: "Prototype",
-    },
-    KPIType: {
-      KPITypeID: 1,
-      KPITypeName: "Process",
-    },
-    ProposedTypeName: "Proposed",
+    KPI: { Value: "Prototype" },
+    KPIType: { Value: "Process" },
+    ProposedTypeName: { Value: "Proposed" },
     TargetDate: "01/01/2022",
     AchievementDate: "02/01/2022",
     Note: "Demo",
@@ -18,18 +12,9 @@ var KPIData = [
   },
   {
     Year: "2022",
-    KPI: {
-      KPIID: 1,
-      KPIName: "Prototype",
-    },
-    KPIType: {
-      KPITypeID: 1,
-      KPITypeName: "Process",
-    },
-    ProposedType: {
-      ProposedTypeID: 1,
-      ProposedTypeName: "Proposed",
-    },
+    KPI: { Value: "Prototype" },
+    KPIType: { Value: "Process" },
+    ProposedTypeName: { Value: "Committed" },
     TargetDate: "01/01/2022",
     AchievementDate: "02/01/2022",
     Note: "Demo",
@@ -38,18 +23,9 @@ var KPIData = [
   },
   {
     Year: "2022",
-    KPI: {
-      KPIID: 1,
-      KPIName: "Prototype",
-    },
-    KPIType: {
-      KPITypeID: 1,
-      KPITypeName: "Process",
-    },
-    ProposedType: {
-      ProposedTypeID: 1,
-      ProposedTypeName: "Proposed",
-    },
+    KPI: { Value: "Enabling Know How" },
+    KPIType: { Value: "Process" },
+    ProposedTypeName: { Value: "Proposed" },
     TargetDate: "01/01/2022",
     AchievementDate: "02/01/2022",
     Note: "Demo",
@@ -58,18 +34,9 @@ var KPIData = [
   },
   {
     Year: "2022",
-    KPI: {
-      KPIID: 1,
-      KPIName: "Prototype",
-    },
-    KPIType: {
-      KPITypeID: 1,
-      KPITypeName: "Process",
-    },
-    ProposedType: {
-      ProposedTypeID: 1,
-      ProposedTypeName: "Proposed",
-    },
+    KPI: { Value: "Commercial" },
+    KPIType: { Value: "Process" },
+    ProposedTypeName: { Value: "Proposed" },
     TargetDate: "01/01/2022",
     AchievementDate: "02/01/2022",
     Note: "Demo",
@@ -78,18 +45,9 @@ var KPIData = [
   },
   {
     Year: "2022",
-    KPI: {
-      KPIID: 1,
-      KPIName: "Prototype",
-    },
-    KPIType: {
-      KPITypeID: 1,
-      KPITypeName: "Process",
-    },
-    ProposedType: {
-      ProposedTypeID: 1,
-      ProposedTypeName: "Proposed",
-    },
+    KPI: { Value: "Commercial" },
+    KPIType: { Value: "Process" },
+    ProposedTypeName: { Value: "Additional" },
     TargetDate: "01/01/2022",
     AchievementDate: "02/01/2022",
     Note: "Demo",
@@ -98,18 +56,9 @@ var KPIData = [
   },
   {
     Year: "2022",
-    KPI: {
-      KPIID: 1,
-      KPIName: "Prototype",
-    },
-    KPIType: {
-      KPITypeID: 1,
-      KPITypeName: "Process",
-    },
-    ProposedType: {
-      ProposedTypeID: 1,
-      ProposedTypeName: "Proposed",
-    },
+    KPI: { Value: "Spec In" },
+    KPIType: { Value: "Process" },
+    ProposedTypeName: { Value: "Proposed" },
     TargetDate: "01/01/2022",
     AchievementDate: "02/01/2022",
     Note: "Demo",
@@ -119,16 +68,16 @@ var KPIData = [
 ];
 
 var EcoDesignTemplate = [
-  {
-    Template: "Draggable",
-    FileName: "file01.docx",
-    Revision: "R00",
-  },
-  {
-    Template: "Extended life product",
-    FileName: "file01.docx",
-    Revision: "R01",
-  },
+  // {
+  //   Template: "Draggable",
+  //   FileName: "file01.docx",
+  //   Revision: "R00",
+  // },
+  // {
+  //   Template: "Extended life product",
+  //   FileName: "file01.docx",
+  //   Revision: "R01",
+  // },
 ];
 
 var MaterialData = [
@@ -266,7 +215,7 @@ var HistoryLogData = [
 var BenefitData = [
   {
     Benefit: "Increase Production",
-    BenefitType: "Direct",
+    BenefitType: { Value: "Direct" },
     BenefitTarget: "200 Ton/Year xxxxx",
     BenefitPlan: "70",
     BenefitDetail: "Demo",
@@ -274,7 +223,7 @@ var BenefitData = [
   },
   {
     Benefit: "FTE Saving",
-    BenefitType: "Direct",
+    BenefitType: { Value: "Direct" },
     BenefitTarget: "2 FTE/year",
     BenefitPlan: "710",
     BenefitDetail: "Demo",
@@ -282,9 +231,9 @@ var BenefitData = [
   },
   {
     Benefit: "Environment",
-    BenefitType: "Non Financial",
+    BenefitType: { Value: "Non Financial" },
     BenefitTarget: "Reduce CO2 xxx/year",
-    BenefitPlan: "",
+    BenefitPlan: "123.321",
     BenefitDetail: "Demo",
     isDelete: false,
   },

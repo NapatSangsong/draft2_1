@@ -1521,3 +1521,81 @@ button.btn.btn-primary {
     color: orange;
 }
 /* rd opex info */
+
+/* rd application */
+.rdapplication-content {
+    min-height: 250px;
+    border-radius: 8px;
+    background-color: rgb(255 255 255 / 80%);
+    border: 10px solid #fff;
+    box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.11);
+    margin: 10px;
+    padding: 20px;
+}
+
+.rdapplication-content-row2 {
+    padding-top: 18px;
+}
+
+.rdapplication-content-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    padding: 5px;
+    gap:10px;
+}
+
+.rdapplication-content-item:hover {
+    box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.11);
+    -webkit-transition: box-shadow 400ms ease,
+        -webkit-transform 400ms ease;
+    transition: box-shadow 400ms ease,
+        -webkit-transform 400ms ease;
+    transition: box-shadow 400ms ease,
+        transform 400ms ease;
+    transition: box-shadow 400ms ease,
+        transform 400ms ease,
+        -webkit-transform 400ms ease;
+    border-radius: 8px;
+    transform: scale(1.1);
+
+}
+
+.rdapplication-content-item-image img {
+    max-width: 50px;
+}
+
+.rdapplication-content-item-text {
+    text-align: center;
+    font-size: 1em;
+    color: #007ac6
+}
+
+.rdapplication-content-badge {
+    position: absolute;
+    left: -20px;
+    font-size: 1.2em;
+    font-weight: 400;
+    top: -5px;
+}
+
+.rdapplication-content-row2 {
+    /* margin-top: 10px; */
+}
+
+/* /rd application */
+
+
+/* P kong */
+.gridcolumn-right{
+    text-align: right;
+}
+.k-numerictextbox input {
+    text-align: right;
+}
+
+/* /P Kong */

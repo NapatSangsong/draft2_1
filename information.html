@@ -192,6 +192,7 @@
                           class="textarea textareaOneLine"
                           role="textbox"
                           contenteditable
+                          id="InitiativeNameData"
                         ></span>
                       </div>
                     </div>
@@ -292,10 +293,7 @@
                             >*</span
                           ></label>
                         <select id="Company" style="width: 100%">
-                          <option>PTTGC</option>
-                          <option>PTT</option>
-                          <option>PTTPM</option>
-                          <option>TOP</option>
+               
                         </select>
                       </div>
                     </div>
@@ -307,10 +305,6 @@
                           >
                         </label>
                         <select id="Organization" style="width: 100%">
-                          <option>Organization 1</option>
-                          <option>Organization 2</option>
-                          <option>Organization 3</option>
-                          <option>Organization 4</option>
                         </select>
                         <span class="specifictext"
                           >(Specify Asset Owner for CAPEX project or Initiative
@@ -326,10 +320,6 @@
                           ></label
                         >
                         <select id="Location" style="width: 100%">
-                          <option>Location 1</option>
-                          <option>Location 2</option>
-                          <option>Location 3</option>
-                          <option>Location 4</option>
                         </select>
                       </div>
                     </div>
@@ -717,23 +707,23 @@
           </div>
         </div>
 
-        <div class="row mgt20">
+        <div class="row mgt20" id="" style="">
           <div class="col-sm-12">
             <div class="sep-content2">
               <div class="form-group content-form">
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-primary" id="SuggestProcessBTN">
                  Suggest Process
                 </button>
               </div>
             </div>
           </div>
 
-          <div class="col-sm-12">
+          <div class="col-sm-12" id="SuggestionProcessDIV" style="display: none;">
             <div class="content-bar-header mgt20">
               <span>Suggestion Process</span>
             </div>
           </div>
-          <div class="col-sm-12">
+          <div class="col-sm-12"  id="SuggestionProcessDIV2" style="display: none;">
             <div class="form-group content-form">
               <input
                 type="radio"
@@ -746,7 +736,10 @@
             </div>
           </div>
           <div class="col-sm-12 mgt20">
-            <button type="submit" class="btn btn-primary">
+             <button type="submit" class="btn btn-primary">
+            Save Draft
+            </button>
+            <button type="submit" class="btn btn-primary" id="SubmitBTN" style="display: none;">
             NEXT
             </button>
           </div>
@@ -755,6 +748,40 @@
           <div class="col-sm-12">
             <div class="sep-content2"></div>
           </div>
+        </div>
+        <div class="row">
+            <div
+        class="container-fluid"
+        id="ValidateSummary"
+        style="background: #f9f9f9;display: none;"
+      >
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div
+                    class="k-validation-summary k-messagebox k-messagebox-error"
+                    role="alert"
+                  >
+                    <div>Validation Errors</div>
+                    <ul>
+                      <li>
+                        <div data-field="" style="cursor: pointer;" class="itemValidate" div-id="InitiativeNameData"
+                          >Initiative Name is required</div
+                        >
+                      </li>
+                      <li>
+                        <a data-field="" href="#">xxxxxx</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
         </div>
       </div>
     </section>

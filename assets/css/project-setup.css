@@ -61,3 +61,9 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.noRecDiv {
+    text-align: center;
+    width: 100%;
+    font-size: 0.9em;
+    padding-top: 4px;
+}

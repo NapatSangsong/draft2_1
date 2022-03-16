@@ -368,16 +368,10 @@
                           <span class="content-required">*</span></label
                         >
                         <select
-                          id="Project Type"
-                          class="ddlTest"
+                          id="ProjectType"
+                          class=""
                           style="width: 80%"
-                        >
-                          <option>Transformation</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                        </select>
+                        ></select>
                       </div>
                     </div>
                     <div class="col-sm-4">
@@ -386,16 +380,10 @@
                           >Business Unit
                         </label>
                         <select
-                          id="Project Type"
-                          class="ddlTest"
+                          id="BusinessUnit"
+                          class=""
                           style="width: 80%"
-                        >
-                          <option>GGC</option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                        </select>
+                        ></select>
                       </div>
                     </div>
                     <div class="col-sm-4">
@@ -405,16 +393,10 @@
                           <span class="content-required">*</span></label
                         >
                         <select
-                          id="Project Type"
-                          class="ddlTest"
+                          id="IndustrySegmentation"
+                          class=""
                           style="width: 80%"
-                        >
-                          <option>Industry Segmentation #0</option>
-                          <option>Industry Segmentation #1</option>
-                          <option>Industry Segmentation #2</option>
-                          <option>Industry Segmentation #3</option>
-                          <option>Industry Segmentation #4</option>
-                        </select>
+                        ></select>
                       </div>
                     </div>
                   </div>
@@ -430,6 +412,7 @@
                           class="ddlTest"
                           style="width: 80%"
                         >
+                          <option value=""></option>
                           <option>Project - Material #0</option>
                           <option>Project - Material #1</option>
                           <option>Project - Material #2</option>
@@ -445,16 +428,10 @@
                           <span class="content-required">*</span></label
                         >
                         <select
-                          id="Project Type"
-                          class="ddlTest"
+                          id="Application"
+                          class=""
                           style="width: 80%"
-                        >
-                          <option>Application #0</option>
-                          <option>Application #1</option>
-                          <option>Application #2</option>
-                          <option>Application #3</option>
-                          <option>Application #4</option>
-                        </select>
+                        ></select>
                       </div>
                     </div>
                     <div class="col-sm-4">
@@ -466,7 +443,7 @@
                           class="form-control form-control-sm dateSelect"
                           id="Proposed-Start-Date"
                           type="text"
-                          value="23/03/2022"
+                          value=""
                           placeholder=""
                           style="width: 80%"
                         />
@@ -485,6 +462,7 @@
                           class="ddlTest"
                           style="width: 80%"
                         >
+                          <option value=""></option>
                           <option>Focus Area #0</option>
                           <option>Focus Area #1</option>
                           <option>Focus Area #2</option>
@@ -504,6 +482,7 @@
                           class="ddlTest"
                           style="width: 80%"
                         >
+                          <option value=""></option>
                           <option>Captive Use Location #0</option>
                           <option>Captive Use Location #1</option>
                           <option>Captive Use Location #2</option>
@@ -526,9 +505,10 @@
                           class="ddlTest"
                           style="width: 80%"
                         >
+                          <option value=""></option>
                           <option>CO-UI Tech Platform #0</option>
                           <option>CO-UI Tech Platform #1</option>
-                          <option>v2</option>
+                          <option>CO-UI Tech Platform #2</option>
                           <option>CO-UI Tech Platform #3</option>
                           <option>CO-UI Tech Platform #4</option>
                         </select>
@@ -734,6 +714,7 @@
                           class="textarea"
                           role="textbox"
                           contenteditable
+                          id="Background"
                         ></span>
                         <!-- <textarea
                           class="form-control"
@@ -752,6 +733,7 @@
                           class="textarea"
                           role="textbox"
                           contenteditable
+                          id="Objectives"
                         ></span>
                         <!-- <textarea
                           class="form-control"
@@ -770,6 +752,7 @@
                           class="textarea"
                           role="textbox"
                           contenteditable
+                          id="ScopeOfWork"
                         ></span>
                         <!-- <textarea
                           class="form-control"
@@ -804,7 +787,11 @@
               <div class="row">
                 <div class="col-sm-12">
                   <div class="form-group content-form mgt5">
-                    <button type="submit" class="btn btn-primary btn-gc">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-gc"
+                      id="KPIAdd"
+                    >
                       <i class="fa-light fa-circle-plus"></i> Add
                     </button>
                   </div>
@@ -926,30 +913,15 @@
                     <div class="col-sm-3">
                       <div class="form-group content-form">
                         <select
-                          id=""
-                          class="multiselectTest"
+                          id="EcoDesignCriteria"
+                          class=""
                           multiple="multiple"
-                          data-placeholder="Select attendees..."
+                          data-placeholder="Select..."
                         >
-                          <option>Steven White</option>
-                          <option>Nancy King</option>
-                          <option>Nancy Davolio</option>
-                          <option>Robert Davolio</option>
-                          <option>Michael Leverling</option>
-                          <option>Andrew Callahan</option>
-                          <option>Michael Suyama</option>
-                          <option selected>Draggable</option>
-                          <option>Laura Peacock</option>
-                          <option>Robert Fuller</option>
-                          <option>Janet White</option>
-                          <option>Nancy Leverling</option>
-                          <option>Robert Buchanan</option>
-                          <option>Margaret Buchanan</option>
-                          <option selected>Extended life product</option>
-                          <option>Anne Davolio</option>
-                          <option>Andrew Suyama</option>
-                          <option>Nige Buchanan</option>
-                          <option>Laura Fuller</option>
+                          <option>Draggable</option>
+                          <option>Extended life product</option>
+                          <option>Test 1</option>
+                          <option>Test 2</option>
                         </select>
                       </div>
                     </div>
@@ -1032,7 +1004,88 @@
                 <button type="submit" class="btn btn-primary">
                   Save Draft
                 </button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  id="SubmitProjectSetup"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 mt-2">
+            <div
+              class="container-fluid"
+              id="ValidateSummary"
+              style="background: #f9f9f9; display: none"
+            >
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div
+                          class="k-validation-summary k-messagebox k-messagebox-error"
+                          role="alert"
+                        >
+                          <div>Validation Errors</div>
+                          <ul id="ValidateSummaryUL">
+                            <!-- <li>
+                              <a data-field="" href="#"
+                                >Background is required.</a
+                              >
+                            </li>
+                            <li>
+                              <a data-field="" href="#"
+                                >Objective is required.</a
+                              >
+                            </li>
+                            <li>
+                              <a data-field="" href="#"
+                                >Scope of Work is required.</a
+                              >
+                            </li> -->
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="container-fluid"
+            id="ValidateSummary"
+            style="background: #f9f9f9; display: none"
+          >
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div
+                        class="k-validation-summary k-messagebox k-messagebox-error"
+                        role="alert"
+                      >
+                        <div>Validation Errors</div>
+                        <ul>
+                          <li>
+                            <a data-field="" href="#"
+                              >Financial Benefit is required.</a
+                            >
+                          </li>
+                          <li>
+                            <a data-field="" href="#">xxxxxx</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

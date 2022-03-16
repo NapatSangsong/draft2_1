@@ -110,3 +110,14 @@ function fontSizeSet() {
     $(this).addClass("setFontActive");
   });
 }
+function GoUpToValidate() {
+  $(".itemValidate").click(function () {
+    var goto = $(this).attr("div-id");
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $("#" + goto).offset().top - 50,
+      },
+      500
+    );
+  });
+}
