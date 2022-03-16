@@ -5,14 +5,15 @@ var dataSourceBenefit = new kendo.data.DataSource({
 $("document").ready(function () {
   // Page_Init();
 
+  $("#SuggestProcessBTN").click(function () {
+    SuggestProcess();
+  });
+  $("#SubmitBTN").click(function () {
+    SubmitInfo();
+  });
   $("#BenefitAdd").click(function () {
     var grid = $("#GridBenefit").data("kendoGrid");
     grid.addRow({
-      Benefit: "Increase Production",
-      BenefitType: "Direct",
-      BenefitTarget: "200 Ton/Year xxxxx",
-      BenefitPlan: "70",
-      BenefitDetail: "Demo",
       isDelete: true,
     });
     return false;
@@ -45,9 +46,100 @@ $("document").ready(function () {
     .data("kendoMultiSelect");
   InitiativeOwner.enable(true);
 
-  $("#Company").kendoDropDownList();
-  $("#Organization").kendoDropDownList();
-  $("#Location").kendoDropDownList();
+  $("#Company").kendoDropDownList({
+    dataTextField: "",
+    dataValueField: "",
+    filter: "contains",
+    suggest: true,
+    index: -1,
+    dataSource: [
+      "PTTGC",
+      "Glycol",
+      "SUN",
+      "GGC",
+      "TFA",
+      "NPC S&E",
+      "GCME",
+      "GCS",
+      "Vencorex (Thailand)",
+      "PPCL",
+      "GCO",
+      "GCP",
+      "GCMPTA",
+      "TPRC",
+    ],
+  });
+  $("#Organization").kendoDropDownList({
+    dataTextField: "",
+    dataValueField: "",
+    filter: "contains",
+    suggest: true,
+    index: -1,
+    dataSource: [
+      "A-P1",
+      "A-P1-AU",
+      "A-P1-OP",
+      "A-P1-TE",
+      "A-P2",
+      "A-P2-AU",
+      "A-P2-OP",
+      "A-P2-TE",
+      "F-MA",
+      "F-MA-BG",
+      "F-MA-CO",
+      "F-MA-EO",
+      "F-MA-GP",
+      "F-MA-PC",
+      "F-MA-PO",
+      "TP-PM",
+      "TP-PM-CC",
+      "TP-PM-CO",
+      "TP-PM-DM",
+      "TP-PO-SO",
+    ],
+  });
+  $("#Location").kendoDropDownList({
+    dataTextField: "",
+    dataValueField: "",
+    filter: "contains",
+    suggest: true,
+    index: -1,
+    dataSource: [
+      "A-P1",
+      "A-P2",
+      "E-GC1.1",
+      "E-GC1.2",
+      "G-OL1.1",
+      "G-OL1.2",
+      "G-OL2",
+      "O-P1",
+      "O-P1.1",
+      "O-P1.2",
+      "O-P2.1",
+      "O-P2.2",
+      "O-P2.3",
+      "O-P3",
+      "O-P4",
+      "P-HD1.1",
+      "P-HD1.2",
+      "P-HD2",
+      "PH-P1.1",
+      "PH-P1.2",
+      "PH-P2",
+      "P-LD",
+      "P-LL1.1",
+      "P-LL1.2",
+      "P-PO",
+      "P-PS",
+      "P-PY",
+      "R-P1",
+      "R-RM",
+      "T-TA",
+      "U-CM",
+      "U-P1",
+      "VCR",
+    ],
+  });
   $("#EstimateOPEXCost").kendoDropDownList();
 
   $("#Type1").kendoDropDownList();
@@ -88,7 +180,11 @@ $("document").ready(function () {
   });
 
   $(".numerictextbox").kendoNumericTextBox({
+    decimals: 3,
+    step: 1,
+    min: 0,
     spinners: false,
+    restrictDecimals: true,
   });
 
   dataSourceBenefit.read();
@@ -114,11 +210,36 @@ $("document").ready(function () {
       createAt: "bottom",
     },
     dataBound: onBenefitDataBound,
+    beforeEdit: function (e) {
+      if (!e.model.isNew()) {
+        e.preventDefault();
+      }
+    },
+    edit: function (e) {
+      if (e.model.isNew() && !e.model.dirty) {
+        e.model.isDelete = true;
+      }
+
+      var dropdown = e.container
+        .find("[data-role=dropdownlist]")
+        .data("kendoDropDownList");
+      if (dropdown) {
+        dropdown.open();
+      }
+    },
     columns: [
       {
         field: "Benefit",
         title: "Benefit <span class='content-required'>*</span>",
         width: "250px",
+        editor: BenefitEditor,
+        template: function (dataItem) {
+          if (dataItem && dataItem.Benefit) {
+            return dataItem.Benefit;
+          } else {
+            return "";
+          }
+        },
         // template:
         //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:Benefit' class='k-textbox k-input' /></span>",
       },
@@ -126,6 +247,14 @@ $("document").ready(function () {
         field: "BenefitType",
         title: "Type",
         width: "250px",
+        editor: BenefitTypeEditor,
+        template: function (dataItem) {
+          if (dataItem && dataItem.BenefitType) {
+            return dataItem.BenefitType.Value;
+          } else {
+            return "";
+          }
+        },
         //editor: KPIDropDownEditor,
         //template: "#=KPIType.KPITypeName#",
         // template:
@@ -135,6 +264,7 @@ $("document").ready(function () {
         field: "BenefitTarget",
         title: "Target (Description) <span class='content-required'>*</span>",
         width: "300px",
+        //editor: TextAreaEditor,
         // editor: KPITypeDropDownEditor,
         // template: "#=KPIType.KPITypeName#",
         // template:
@@ -146,6 +276,17 @@ $("document").ready(function () {
         width: "120px",
         // editor: ProposedTypeDropDownEditor,
         template: "<div class='numberRight'>#=BenefitPlan#</div>",
+        editor: numericEditor2,
+        attributes: {
+          class: "gridcolumn-right",
+        },
+        template: function (dataItem) {
+          if (dataItem && dataItem.BenefitPlan) {
+            return kendo.toString(dataItem.BenefitPlan, "#,###.###");
+          } else {
+            return "";
+          }
+        },
         // template:
         //   "<span class='k-input k-textbox k-input-solid k-input-md k-rounded-md'><input data-bind='value:BenefitPlan' class='k-textbox k-input' /></span>",
       },
@@ -159,8 +300,15 @@ $("document").ready(function () {
         field: "",
         title: " ",
         width: "50px",
+        // template:
+        //   "#if(isDelete){# <a style='text-align: center;'><i class='fa-regular fa-trash k-grid-delete' style='cursor: pointer'></i></a>#}else{#  #}#",
         template:
-          "#if(isDelete){# <i class='fa-solid fa-trash-can'></i>#}else{#  #}#",
+          "<a style='text-align: center;'><i class='fa-regular fa-trash k-grid-delete' style='cursor: pointer'></i></a>",
+        click: function (e) {
+          e.preventDefault();
+          var tr = $(e.target).closest("tr");
+          $("#GridBenefit").data("kendoGrid").removeRow(tr);
+        },
       },
     ],
   });
@@ -200,4 +348,98 @@ function BenefireditAll() {
   //   format: "dd/MM/yyyy",
   // });
   $(".ddlTestEdit").kendoDropDownList();
+}
+
+function BenefitEditor(container, options) {
+  $(
+    '<input id="' +
+      options.field +
+      '" data-bind="value:' +
+      options.field +
+      '"/>'
+  )
+    .appendTo(container)
+    .kendoDropDownList({
+      dataSource: [
+        { Value: "Increase Production" },
+        { Value: "FTE Saving" },
+        { Value: "Environment" },
+        { Value: "Energy Saving" },
+        { Value: "Safety" },
+        { Value: "Law and Regulation" },
+        { Value: "Manhour Saving" },
+        { Value: "Others" },
+      ],
+      autoBind: true,
+      dataTextField: "Value",
+      dataValueField: "Value",
+    });
+}
+function BenefitTypeEditor(container, options) {
+  $(
+    '<input id="' +
+      options.field +
+      '" data-bind="value:' +
+      options.field +
+      '"/>'
+  )
+    .appendTo(container)
+    .kendoDropDownList({
+      dataSource: [
+        { Value: "Direct" },
+        { Value: "Indirect" },
+        { Value: "Non Financial" },
+      ],
+      autoBind: true,
+      dataTextField: "Value",
+      dataValueField: "Value",
+    });
+}
+function TextAreaEditor(container, options) {
+  $(
+    '<span id="' +
+      options.field +
+      '" data-bind="value:' +
+      options.field +
+      '" class="textarea textareaOneLine textareaGrid" role="textbox" contenteditable/>'
+  ).appendTo(container);
+}
+function numericEditor2(container, options) {
+  $('<input data-bind="value:' + options.field + '"/>')
+    .appendTo(container)
+    .kendoNumericTextBox({
+      decimals: 3,
+      step: 1,
+      min: 0,
+      spinners: false,
+      restrictDecimals: true,
+    });
+}
+function SubmitInfo() {
+  //validate
+  let InitiativeNameData = $("#InitiativeNameData").text();
+
+  if (InitiativeNameData == "") {
+    $("#ValidateSummary").fadeIn();
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $("#ValidateSummary").offset().top,
+      },
+      2000
+    );
+  }
+  //submit
+}
+
+function SuggestProcess() {
+  $("#SuggestionProcessDIV").fadeIn();
+  $("#SuggestionProcessDIV2").fadeIn();
+  $("#SubmitBTN").fadeIn();
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $("#SuggestionProcessDIV").offset().top,
+    },
+    2000
+  );
+  GoUpToValidate();
 }
