@@ -983,7 +983,7 @@ section {
     /* border: 1px solid red; */
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    min-width: 200px;
+    /* min-width: 200px; */
 }
 
 .StageGate-bar-items-div:last-child>.StageGate-item {
