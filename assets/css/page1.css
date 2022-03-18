@@ -1,0 +1,111 @@
+.bottomBar{
+     background-image: url(../images/banner-bg6.png);
+     background-position: bottom;
+     background-size: cover;
+     background-position-y: 28vh;
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+
+     height: 500px;
+     width: 100vw;
+     position: absolute;
+     bottom: 0px;
+     z-index: 200;
+}
+
+.bar{
+    z-index: 300;
+}
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 100;
+}
+.bar {
+    z-index: 300;
+    background: #03a9f4;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 8px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10000;
+    position: relative;
+}
+.bar-item {
+    width: 25%;
+}
+
+
+.div-block-103-copy {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 200px;
+    height: 620px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    grid-auto-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
+    border-style: solid;
+    border-width: 310px 100px;
+    border-color: hsla(0, 0%, 100%, 0.71) #000 #000 hsla(0, 0%, 100%, 0.15) ;
+    background-color: #fff;
+    opacity: 0.15;
+}
+.div-block-102 {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 3;
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 16px;
+    -ms-grid-columns: 1fr 200px 1fr;
+    grid-template-columns: 2fr 200px 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    border-right: 1px solid rgba(0, 0, 0, 0.26);
+    z-index: 100;
+}
+.div-block-104 {
+    
+    position: relative;
+    z-index: 2;
+      background-color: hsla(0, 0%, 100%, 0.15);
+}
+.div-block-105-left {
+      background-color: rgba(0, 0, 0, 0.15);
+
+}
+.content2col{
+    background:rgb(216, 216, 216);
+    min-height: calc(100vh - 150px);
+}
+.notification{
+    z-index: 500;
+}

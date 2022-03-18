@@ -25,6 +25,24 @@
     />
   </head>
   <body>
+    <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+      <div class="loader">
+        <div class="spinner">
+          <div class="spinner-container">
+            <div class="spinner-rotator">
+              <div class="spinner-left">
+                <div class="spinner-circle"></div>
+              </div>
+              <div class="spinner-right">
+                <div class="spinner-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
     <nav class="navbar navbar-expand-lg navbar-light">
       <a class="navbar-brand" href="#"
         ><img src="./assets/images/gc-logo.png"
@@ -160,63 +178,70 @@
             class="p-0 mt-2 text-uppercase StageGate-Detail-Header InitiativeName"
             style="display: inline-block"
           >
-            A Simulation Model of Ethylene Oxide and Ethylene Glycol Plant
+            2021-007779 : A Simulation Model of Ethylene Oxide and Ethylene
+            Glycol Plant
           </div>
         </div>
 
-        <div class="col-auto">
-          <div class="p-1 text-uppercase StageGate-Detail-Header">
-            Initiative OWNER
+        <div class="col-sm-12 InitiativeDetailDive">
+          <div class="InitiativeDetailCol col-sm-12 col-lg-auto">
+            <div class="p-0 text-uppercase StageGate-Detail-Header">
+              Initiative OWNER
+            </div>
+            <div class="StageGate-Detail-Show">
+              CHATREE.D<br />
+              &lt;S S-PS-SP/12334&gt;
+            </div>
           </div>
-          <div class="StageGate-Detail-Show">
-            CHATREE.D<br />
-            &lt;S S-PS-SP/12334&gt;
+          <!-- <div class="InitiativeDetailCol col-sm-12 col-lg-auto">
+            <div class="p-0 text-uppercase StageGate-Detail-Header">
+              PROJECT NO.
+            </div>
+            <div class="StageGate-Detail-Show">2021-007779</div>
+          </div> -->
+          <div class="InitiativeDetailCol col-sm-12 col-lg-auto">
+            <div class="p-0 text-uppercase StageGate-Detail-Header">
+              CURRENT STAGE
+            </div>
+            <div class="StageGate-Detail-Show">
+              Identify + Design & Cost Estimate +<br />TLM Test 3 line (Napat)
+            </div>
           </div>
-        </div>
-        <div class="col-auto">
-          <div class="p-1 text-uppercase StageGate-Detail-Header">
-            PROJECT NO.
+          <div class="InitiativeDetailCol col-sm-12 col-lg-auto">
+            <div class="p-0 text-uppercase StageGate-Detail-Header">
+              NEXT GATE
+            </div>
+            <div class="StageGate-Detail-Show">Execution</div>
           </div>
-          <div class="StageGate-Detail-Show">2021-007779</div>
-        </div>
-        <div class="col-auto">
-          <div class="p-1 text-uppercase StageGate-Detail-Header">
-            CURRENT STAGE
+          <div class="InitiativeDetailCol col-sm-12 col-lg-auto">
+            <div class="p-0 text-uppercase StageGate-Detail-Header">
+              PROJECT ENGINEER
+            </div>
+            <div class="StageGate-Detail-Show">
+              CHATREE.D<br />
+              &lt;S S-PS-SP/12334&gt;
+            </div>
           </div>
-          <div class="StageGate-Detail-Show">
-            Identify + Design & Cost Estimate +<br />TLM Test 3 line (Napat)
+          <div class="InitiativeDetailCol col-sm-12 col-lg-auto">
+            <div class="p-0 text-capitalize StageGate-Detail-Header">
+              STATUS
+            </div>
+            <div class="StageGate-Detail-Show">
+              Prepare information for approval
+            </div>
           </div>
-        </div>
-        <div class="col-auto">
-          <div class="p-1 text-uppercase StageGate-Detail-Header">
-            NEXT GATE
+          <div class="InitiativeDetailCol col-sm-12 col-lg-auto">
+            <div class="p-0 text-capitalize StageGate-Detail-Header">
+              <i class="fa-solid fa-star" style="color: orange"></i>
+            </div>
+            <div class="StageGate-Detail-Show">
+              Preferred Accelerating Track
+            </div>
           </div>
-          <div class="StageGate-Detail-Show">Execution</div>
-        </div>
-        <div class="col-auto">
-          <div class="p-1 text-uppercase StageGate-Detail-Header">
-            PROJECT ENGINEER
-          </div>
-          <div class="StageGate-Detail-Show">
-            CHATREE.D<br />
-            &lt;S S-PS-SP/12334&gt;
-          </div>
-        </div>
-        <div class="col-auto">
-          <div class="p-1 text-capitalize StageGate-Detail-Header">STATUS</div>
-          <div class="StageGate-Detail-Show">
-            Prepare information for approval
-          </div>
-        </div>
-        <div class="col-auto">
-          <div class="p-1 text-capitalize StageGate-Detail-Header">
-            <i class="fa-solid fa-star" style="color: orange"></i>
-          </div>
-          <div class="StageGate-Detail-Show">Preferred Accelerating Track</div>
         </div>
       </div>
       <div class="row StageGate-bar">
-        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+        <div class="no-pd-mg StageGate-bar-items-div">
           <div class="StageGate-item StageGate-item-Active">
             <div>Idea Approval</div>
             <div class="diamond"></div>
@@ -227,77 +252,79 @@
             </div>
           </div>
         </div>
-        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+        <div class="no-pd-mg StageGate-bar-items-div">
           <div class="StageGate-item">
-            <div>Stage 0 <br />Idea Definition</div>
+            <div>Stage 0 - Idea Definition</div>
             <div class="diamond"></div>
           </div>
           <div class="StageGate-bar-items-div-status">
-            <div class="StageGate-item-status">22/2/2022</div>
+            <div class="StageGate-item-status">22/02/2022</div>
             <div class="StageGate-item-status">Gate 0 - Idea Definition</div>
           </div>
         </div>
-        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+        <div class="no-pd-mg StageGate-bar-items-div">
           <div class="StageGate-item">
-            <div>Stage 1<br />Scoping</div>
+            <div>Stage 1 - Scoping</div>
             <div class="diamond"></div>
           </div>
           <div class="StageGate-bar-items-div-status">
-            <div class="StageGate-item-status">22/2/2022</div>
+            <div class="StageGate-item-status">22/02/2022</div>
             <div class="StageGate-item-status">
               Gate 1+2 - Scoping+Feasibility Study
             </div>
           </div>
         </div>
-        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+        <div class="no-pd-mg StageGate-bar-items-div">
           <div class="StageGate-item">
-            <div>Stage 2<br />Feasibility Study</div>
+            <div>Stage 2 - Feasibility Study</div>
             <div class="diamond"></div>
           </div>
           <div class="StageGate-bar-items-div-status">
-            <div class="StageGate-item-status">-</div>
-            <div class="StageGate-item-status">-</div>
+            <div class="StageGate-item-status"></div>
+            <div class="StageGate-item-status"></div>
           </div>
         </div>
-        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+        <div class="no-pd-mg StageGate-bar-items-div">
           <div class="StageGate-item">
-            <div>Stage 3<br />Lab Scale</div>
+            <div>Stage 3 - Lab Scale</div>
             <div class="diamond"></div>
           </div>
           <div class="StageGate-bar-items-div-status">
-            <div class="StageGate-item-status">-</div>
+            <div class="StageGate-item-status"></div>
             <div class="StageGate-item-status">Gate 3 - Lab Scale</div>
           </div>
         </div>
-        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+        <div class="no-pd-mg StageGate-bar-items-div">
           <div class="StageGate-item">
-            <div>Stage 4<br />Scale Up</div>
+            <div>Stage 4 - Scale Up</div>
             <div class="diamond"></div>
           </div>
           <div class="StageGate-bar-items-div-status">
-            <div class="StageGate-item-status">-</div>
+            <div class="StageGate-item-status"></div>
             <div class="StageGate-item-status">Gate 4 - Scale Up</div>
           </div>
         </div>
-        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+        <div class="no-pd-mg StageGate-bar-items-div">
           <div class="StageGate-item">
-            <div>Stage 5<br />Pre-Launch</div>
+            <div>Stage 5 - Pre-Launch</div>
             <div class="diamond"></div>
           </div>
           <div class="StageGate-bar-items-div-status">
-            <div class="StageGate-item-status">-</div>
+            <div class="StageGate-item-status"></div>
             <div class="StageGate-item-status">Gate 5 - Pre-Launch</div>
           </div>
         </div>
-        <div class="col-sm no-pd-mg StageGate-bar-items-div">
+        <div class="no-pd-mg StageGate-bar-items-div">
           <div class="StageGate-item">
-            <div>Post Launch<br />Review</div>
+            <div>Post Launch Review</div>
             <div class="diamond"></div>
           </div>
           <div class="StageGate-bar-items-div-status">
-            <div class="StageGate-item-status">-</div>
+            <div class="StageGate-item-status"></div>
             <div class="StageGate-item-status">Go To Launch</div>
+
             <div class="StageGate-item-status StageGate-item-status-last">
+              <br />
               End
             </div>
           </div>

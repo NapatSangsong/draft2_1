@@ -1,4 +1,7 @@
 $("document").ready(function () {
+  // ==== Preloader
+
+  setTimeout(fadeout, 500);
   $(".download-content-click").click(function () {
     if ($(this).hasClass("isExpand")) {
       $(this).removeClass("isExpand");
@@ -24,7 +27,7 @@ $("document").ready(function () {
     $(".project-list").slideToggle("slow");
   });
 
-  calStageGate();
+  calStageGate2();
   fontFamSet();
   fontSizeSet();
 
@@ -52,6 +55,19 @@ function calStageGate() {
     $(this).css("margin-left", "0px");
   });
 }
+function calStageGate2() {
+  var minW = 0;
+  var leftItem = 0;
+  $(".StageGate-bar-items-div").each(function (ix, vx) {
+    var xItem = $(vx)
+      .find(".StageGate-item-status")
+      .not(".StageGate-item-status-last")
+      .not(".StageGate-item-status-first");
+
+    xItem.css("margin-left", "-25px");
+  });
+}
+
 function calStageGateAlign() {
   var maxW = 0;
   var leftItem = 0;
@@ -120,4 +136,9 @@ function GoUpToValidate() {
       500
     );
   });
+}
+function fadeout() {
+  // document.querySelector(".preloader").style.opacity = "0";
+  // document.querySelector(".preloader").style.display = "none";
+  $(".preloader").fadeOut();
 }
