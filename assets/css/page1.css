@@ -10,7 +10,7 @@
      width: 100vw;
      position: absolute;
      bottom: 0px;
-     z-index: 200;
+     z-index: 2000;
 }
 
 .bar{
@@ -38,11 +38,31 @@
     align-items: center;
     z-index: 10000;
     position: relative;
+    background-color: #abe9cd;
+    background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+
 }
 .bar-item {
-    width: 25%;
-}
+    width: 22%;
+    text-align: center;
+    position: relative;
 
+    
+}
+.bar-item:first-child{
+    width: 35%;
+}
+.bar-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 35px;
+    right: 0px;
+    top: -8px;
+    background-color: transparent;
+    transform: skewX(-25deg);
+    box-shadow: rgba(38,57,77,0.6) 5px 0px 4px -3px;
+}
 
 .div-block-103-copy {
     position: relative;
@@ -51,7 +71,7 @@
     display: -ms-flexbox;
     display: flex;
     width: 200px;
-    height: 620px;
+    height: 320px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -66,13 +86,13 @@
     -ms-grid-rows: auto auto;
     grid-template-rows: auto auto;
     border-style: solid;
-    border-width: 310px 100px;
+    border-width: 200px 100px;
     border-color: hsla(0, 0%, 100%, 0.71) #000 #000 hsla(0, 0%, 100%, 0.15) ;
     background-color: #fff;
     opacity: 0.15;
 }
 .div-block-102 {
-    position: absolute;
+    position: relative;
     left: 0%;
     top: 0%;
     right: 0%;
@@ -100,12 +120,28 @@
 }
 .div-block-105-left {
       background-color: rgba(0, 0, 0, 0.15);
+      position: relative;
+      
 
+}
+.rightBox1{
+    border: 1px solid red;
+    position: absolute;
+    left: 0px;
+    padding-left: 20px;;
+    width: calc(100% - 20px);
 }
 .content2col{
     background:rgb(216, 216, 216);
-    min-height: calc(100vh - 150px);
+   
 }
 .notification{
     z-index: 500;
+}
+
+span.notification-bar-task {
+    color: red;
+}
+.notification-bar-title{
+    color:#ffffff;
 }
