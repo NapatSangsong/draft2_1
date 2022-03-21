@@ -141,8 +141,8 @@
     grid-auto-columns: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 16px;
-    -ms-grid-columns: 1fr 200px 1fr;
-    grid-template-columns: 2fr 200px 1fr;
+    -ms-grid-columns: 800px 200px 1fr;
+    grid-template-columns: 800px 200px 1fr;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
     border-right: 1px solid rgba(0, 0, 0, 0.26);
@@ -452,5 +452,5 @@ span.notification-bar-task {
     background-color: #abe9cd;
    background-color: #2a2a72;
    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
-    min-height: 105px;
+    min-height: 128px;
 }
