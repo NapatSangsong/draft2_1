@@ -40,14 +40,50 @@
     position: relative;
     background-color: #abe9cd;
     background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
+   
 
 }
 .bar-item {
     width: 22%;
     text-align: center;
     position: relative;
+    cursor: pointer;
+       transition: width 400ms ease,
+       color 400ms ease,
+       background-color 400ms ease,
+       border-color 400ms ease;
+       color: #ffffff;
+       text-shadow: 2px 4px 5px rgb(0 0 0 / 30%),
+       0px -4px 10px rgb(255 255 255 / 30%);
+       font-weight: bolder;
+       position: relative;
 
-    
+}
+.bar-item>span{
+      position: relative;
+      z-index: 200;
+  
+}
+.bar-item:hover{
+    width: 45%;
+    transition: width 400ms ease,
+    color 400ms ease,
+    background-color 400ms ease,
+    border-color 400ms ease;
+      color:#007ac6;
+}
+.bar-item:hover::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 34px;
+    /* border: 1px solid red; */
+    top: 0px;
+    left: 2px;
+    transform: skewX(-25deg);
+    background: rgba(255, 255, 255, 0.4);
+    filter: blur(10px);
+    z-index: 100;
 }
 .bar-item:first-child{
     width: 35%;
@@ -274,6 +310,8 @@ span.notification-bar-task {
         color: #ffff;
             transform 400ms ease,
             -webkit-transform 400ms ease;
+                text-shadow: 2px 4px 5px rgb(0 0 0 / 30%),
+                0px -4px 10px rgb(255 255 255 / 30%);
 }
 .circleMenu-text-create {
     text-align: center;
@@ -361,7 +399,7 @@ span.notification-bar-task {
 }
 
 .shade4 {
-    opacity: 0.4;
+    opacity: 0.2;
 }
 
 .shade5 {
@@ -380,4 +418,39 @@ span.notification-bar-task {
     100% {
         transform: scale(0.8);
     }
+}
+
+
+
+span.notification-bar-task {
+    color: #fa0000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background: #efefef;
+    border-radius: 5px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+
+
+
+.footerPage1 {
+    z-index: 300;
+    background: #03a9f4;
+    box-shadow: rgb(50 50 93 / 25%) 0px -4px 12px -2px, rgb(0 0 0 / 30%) 0px 3px 7px -3px;
+    padding: 8px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10000;
+    position: relative;
+    background-color: #abe9cd;
+   background-color: #2a2a72;
+   background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    min-height: 105px;
 }
