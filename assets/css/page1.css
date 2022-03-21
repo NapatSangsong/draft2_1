@@ -65,12 +65,12 @@
   
 }
 .bar-item:hover{
-    width: 45%;
+    width: 40%;
     transition: width 400ms ease,
     color 400ms ease,
     background-color 400ms ease,
     border-color 400ms ease;
-      color:#007ac6;
+      /* color:#007ac6; */
 }
 .bar-item:hover::before {
     content: '';
@@ -124,7 +124,7 @@
     border-style: solid;
     border-width: 200px 100px;
     border-color: hsl(0deg 0% 100% / 0%) #fff #fff hsl(0deg 0% 100% / 0%);
-    background-color: transparent;
+    background-color:hsl(0deg 0% 0% / 16%);
     opacity: 0.90;
 }
 .div-block-102 {
@@ -151,7 +151,7 @@
 .div-block-104 {
     position: relative;
     z-index: 2;
-    /* background-color: hsla(0, 0%, 100%, 0.15); */
+    background-color: hsl(0deg 0% 0% / 15%);
     height: auto;
     display: flex;
     flex-direction: row;
@@ -242,22 +242,23 @@ span.notification-bar-task {
 .circleMenu {
     max-width: 155px;
     width: 185px;
-    height: 180px;
+    height: 133px;
     position: absolute;
     z-index: 8;
-  transform: rotate(-35deg);
-  border-radius: 60px;
-  cursor: pointer;
-     -webkit-transition: box-shadow 400ms ease,
-     -webkit-transform 400ms ease;
-     transition: box-shadow 400ms ease,
-     -webkit-transform 400ms ease;
-     transition: box-shadow 400ms ease,
-     transform 400ms ease;
-     transition: box-shadow 400ms ease,
-     transform 400ms ease,
-     -webkit-transform 400ms ease;
- 
+    transform: rotate(-35deg);
+    border-radius: 60px;
+    cursor: pointer;
+    -webkit-transition: box-shadow 400ms ease,
+        -webkit-transform 400ms ease;
+    transition: box-shadow 400ms ease,
+        -webkit-transform 400ms ease;
+    transition: box-shadow 400ms ease,
+        transform 400ms ease;
+    transition: box-shadow 400ms ease,
+        transform 400ms ease,
+        -webkit-transform 400ms ease;
+    border: 8px solid #ffffff;
+    box-sizing: content-box;
 }
 .circleMenu:hover{
         box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.51);
@@ -272,6 +273,7 @@ span.notification-bar-task {
         -webkit-transform 400ms ease;
    
         transform: scale(1.2);
+ 
         
 }
 .circleMenuDisable:hover {
@@ -308,10 +310,11 @@ span.notification-bar-task {
     align-items: center;
     font-size: 1.6em;
         color: #ffff;
-            transform 400ms ease,
+            -webkit-transition: box-shadow 400ms ease,
             -webkit-transform 400ms ease;
                 text-shadow: 2px 4px 5px rgb(0 0 0 / 30%),
                 0px -4px 10px rgb(255 255 255 / 30%);
+                
 }
 .circleMenu-text-create {
     text-align: center;
@@ -453,4 +456,16 @@ span.notification-bar-task {
    background-color: #2a2a72;
    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
     min-height: 128px;
+}
+
+.rightBox1 {
+    position: absolute;
+    left: -73px;
+    padding-left: 20px;
+    width: calc(90%);
+    /* border: 1px solid red; */
+    height: 100%;
+    transform: skew(-27deg, 0deg);
+    transform-origin: left;
+    box-shadow: rgb(50 50 93 / 25%) 0px -1px 67px -48px, rgb(0 0 0 / 20%) 0px 6px 20px -24px;
 }
