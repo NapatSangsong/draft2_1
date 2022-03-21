@@ -40,7 +40,7 @@
     position: relative;
     background-color: #abe9cd;
     background-image: linear-gradient(315deg, #abe9cd 0%, #3eadcf 74%);
-   
+   overflow: hidden;
 
 }
 .bar-item {
@@ -142,7 +142,7 @@
     grid-column-gap: 0px;
     grid-row-gap: 16px;
     -ms-grid-columns: 800px 200px 1fr;
-    grid-template-columns: 800px 200px 1fr;
+    grid-template-columns: 700px 200px 400px;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
     border-right: 1px solid rgba(0, 0, 0, 0.26);
@@ -455,7 +455,11 @@ span.notification-bar-task {
     background-color: #abe9cd;
    background-color: #2a2a72;
    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
-    min-height: 128px;
+    min-height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+
 }
 
 .rightBox1 {
@@ -468,4 +472,58 @@ span.notification-bar-task {
     transform: skew(-27deg, 0deg);
     transform-origin: left;
     box-shadow: rgb(50 50 93 / 25%) 0px -1px 67px -48px, rgb(0 0 0 / 20%) 0px 6px 20px -24px;
+}
+
+.rightBoxContent {
+    /* min-height: 79px; */
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    gap:2%;
+    position: relative;
+    z-index: 500;
+
+}
+.rightBoxContent-item {
+    display: flex;
+    height: 100%;
+    /* width: 80px; */
+ 
+    border-radius: 10px;
+    background-color: #ffffff;
+    /* background-image: linear-gradient(315deg, #f8f8f8 0%, #eeeeee 100%); */
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding:5px;
+    min-width: 85px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    text-align: center;
+}
+.rightBoxContent3 .rightBoxContent-item{
+    min-width: 100px;
+}
+.rightBoxContentDiv {
+    margin-top: 20px;
+    margin-left: -190px;
+    box-sizing: content-box;
+    padding-right: 20px;
+}
+.rightBoxContent-header {
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+.item-pic img {
+    width: 38px;
 }
