@@ -530,6 +530,22 @@ span.notification-bar-task {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
     text-align: center;
     margin: 5px;
+    cursor: pointer;
+}
+.rightBoxContent-item:hover{
+     box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.51);
+     -webkit-transition: box-shadow 400ms ease,
+     -webkit-transform 400ms ease;
+     transition: box-shadow 400ms ease,
+     -webkit-transform 400ms ease;
+     transition: box-shadow 400ms ease,
+     transform 400ms ease;
+     transition: box-shadow 400ms ease,
+     transform 400ms ease,
+     -webkit-transform 400ms ease;
+    background-color: #ffffff;
+     transform: scale(1.2);
+     z-index: 500;
 }
 .rightBoxContent3 .rightBoxContent-item{
     min-width: 100px;
@@ -558,4 +574,77 @@ span.notification-bar-task {
     margin-left: 10px;
     text-align: left;
     padding-right: 15px;
+}
+
+
+.rightBoxContent-item-collapse {
+    display: flex;
+    height: 100%;
+    /* width: 80px; */
+    border-radius: 10px;
+    background-color: #B3F4FF;
+    /* background-image: linear-gradient(315deg, #f8f8f8 0%, #eeeeee 100%); */
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 5px;
+    min-width: 85px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    text-align: center;
+    margin: 5px;
+    cursor: pointer;
+    width:100%;
+}
+.rightBoxContent-item-collapse:hover {
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.51);
+    -webkit-transition: box-shadow 400ms ease,
+        -webkit-transform 400ms ease;
+    transition: box-shadow 400ms ease,
+        -webkit-transform 400ms ease;
+    transition: box-shadow 400ms ease,
+        transform 400ms ease;
+    transition: box-shadow 400ms ease,
+        transform 400ms ease,
+        -webkit-transform 400ms ease;
+    background-color: #ffffff;
+    transform: scale(1.1);
+    z-index: 500;
+}
+.showDownload {
+        box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.51);
+        -webkit-transition: box-shadow 400ms ease,
+        -webkit-transform 400ms ease;
+        transition: box-shadow 400ms ease,
+        -webkit-transform 400ms ease;
+        transition: box-shadow 400ms ease,
+        transform 400ms ease;
+        transition: box-shadow 400ms ease,
+        transform 400ms ease,
+        -webkit-transform 400ms ease;
+    margin: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 94%;
+    background: #fff;
+    height: 93%;
+    border-radius: 10px;
+    z-index: 2000;
+    padding: 20px;
+display: none;
+
+}
+.closeDownload {
+    text-align: right;
+    font-size: 2em;
+    position: absolute;
+    top: -16px;
+    right: 3px;
+cursor: pointer;
+z-index: 2000;
+}
+.closeDownload:hover{
+color: #1991eb;
 }
