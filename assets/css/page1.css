@@ -164,11 +164,12 @@
     padding-right: 15px;
 }
 .div-block-105-left {
-    background-color: rgb(255 255 255 / 90%);
+    background-color: rgb(0 122 198 / 50%);
     position: absolute;
     right: 0px;
     height: calc(100vh - 120px);
     width: 32%;
+    /* border-left: 10px solid #fff; */
 }
 
 .content2col{
@@ -544,10 +545,11 @@ span.notification-bar-task {
     height: calc(100% - 40px);
 }
 .rightBoxContent-header {
-    text-align: right;
+    text-align: left;
     margin-right: 20px;
     margin-bottom: 10px;
     font-size: 1.4em;
+    color: #fff;
 }
 .item-pic img {
     width: 38px;
