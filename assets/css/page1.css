@@ -159,7 +159,7 @@
     align-content: center;
     justify-content: center;
     align-items: center;
-    width: 68%;
+    width: 70%;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -168,7 +168,7 @@
     position: absolute;
     right: 0px;
     height: calc(100vh - 120px);
-    width: 32%;
+    width: 30%;
     /* border-left: 10px solid #fff; */
 }
 
@@ -560,7 +560,7 @@ span.notification-bar-task {
     min-width: 100px;
 }
 .rightBoxContentDiv {
-    margin-top: 20px;
+    margin-top: 5px;
     /* margin-left: -190px; */
     box-sizing: content-box;
     /* padding-right: 20px; */
@@ -572,12 +572,12 @@ span.notification-bar-task {
 .rightBoxContent-header {
     text-align: left;
     margin-right: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     font-size: 1.4em;
     color: #fff;
 }
 .item-pic img {
-    width: 38px;
+    width: 30px;
 }
 .item-text {
     margin-left: 10px;

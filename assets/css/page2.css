@@ -101,10 +101,7 @@
     z-index: 500;
 }
 .divMainMenu {
-    background: url(/assets/images/shutterstock_473088934-flip.jpg);
-    background-size: cover;
-    background-position-y: -231px;
-    background-position-x: -335px;
+    background: url("/assets/images/shutterstock_473088934-flip.jpg") -294px -300px / cover;
 }
 .menuPage2 {
     /* border: 1px solid red; */
@@ -114,6 +111,7 @@
     align-content: center;
     justify-content: center;
     align-items: center;
+    margin-top:210px;
 
 }
 .menuPage2-item {
