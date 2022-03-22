@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GC Accolade</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link href="./assets/css/main.css" rel="stylesheet" />
+    <link href="./assets/css/page1.css" rel="stylesheet" />
+      <link href="./assets/css/page2.css" rel="stylesheet" />
+    <link href="./assets/fa-pro-6.0.0-web/css/all.min.css" rel="stylesheet" />
+    <link
+      href="./assets/kendoui.for.jquery.2022.1.119.commercial/styles/kendo.common-bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./assets/kendoui.for.jquery.2022.1.119.commercial/styles/kendo.bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+      <div class="loader">
+        <div class="spinner">
+          <div class="spinner-container">
+            <div class="spinner-rotator">
+              <div class="spinner-left">
+                <div class="spinner-circle"></div>
+              </div>
+              <div class="spinner-right">
+                <div class="spinner-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#"
+        ><img src="./assets/images/gc-logo.png"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-clock-rotate-left" id="recent-icon"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00001</div>
+                <div class="initiativeShow">
+                  Development of super high heat ABS for home appliance parts
+                </div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00002</div>
+                <div class="initiativeShow">
+                  Toluene methylation process development
+                </div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00003</div>
+                <div class="initiativeShow">
+                  A Simulation Model of Ethylene Oxide and Ethylene Glycol Plant
+                </div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00004</div>
+                <div class="initiativeShow">Test Initiative #01</div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00005</div>
+                <div class="initiativeShow">Test Initiative #02</div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00006</div>
+                <div class="initiativeShow">Test Initiative #03</div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00007</div>
+                <div class="initiativeShow">Test Initiative #04</div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00008</div>
+                <div class="initiativeShow">Test Initiative #05</div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00009</div>
+                <div class="initiativeShow">Test Initiative #06</div></a
+              >
+              <a class="dropdown-item" href="#"
+                ><div class="initiativeIDShow">2022-00010</div>
+                <div class="initiativeShow">Test Initiative #10</div></a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Own Initiatives</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Tasks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">All Initiatives</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Reports
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">System Report</a>
+              <a class="dropdown-item" href="#">Admin Report</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Admin</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search Initiatives"
+            aria-label="Search Initiatives"
+          />
+          <i class="fa-duotone fa-magnifying-glass"></i>
+          <div class="profile-menu">
+            <div class="profile-icon"></div>
+            <div class="profile-help">
+              <i class="fa-duotone fa-question"></i>
+            </div>
+          </div>
+        </form>
+      </div>
+    </nav>
+      <section class="notification" style="display: none;">
+      <div class="container">
+        <div class="row row-cols-12 notification-bar">
+          <div class="col-sm-12">
+            <span class="notification-bar-title" >
+            <i class="fa-duotone fa-list-check"></i>   <!--<i class="fa-duotone fa-list"></i>--> You have</span> 
+              <span class="notification-bar-task">3 pending tasks</span>
+          </div>
+        </div>
+    </section>
+   <section class="bar">
+      <div class="bar-item">
+
+            <span class="notification-bar-title">
+            <i class="fa-duotone fa-list-check"></i>   <!--<i class="fa-duotone fa-list"></i>--> You have</span> 
+              <span class="notification-bar-task">3 pending tasks</span>
+     
+    </div>
+     <div class="bar-item">  
+       <i class="fa-duotone fa-user"></i>
+              <span>MY OWN INITIATIVES</span></div>
+     <div class="bar-item">   
+       <i class="fa-duotone fa-list-check"></i>
+              <span>MY TASKS</span></div>
+     <div class="bar-item"> 
+       <i class="fa-duotone fa-layer-group"></i>
+              <span>ALL INITIATIVES</span></div>
+   
+   </section>
+   <section class="content2col" style="position: relative;">
+     <div class="div-block-102">
+      <div class="div-block-104 " style="">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+                <div class="menuPage2">
+                    <div class="menuPage2-item">
+                      <div class="menuPage2-item-img"><img src="./assets/images/create1-icon.png" alt="INITIATIVE"/></div>
+                       <div class="menuPage2-item-text">INITIATIVE</div>
+                    </div>
+                    <div class="menuPage2-item">
+                        <div class="menuPage2-item-img"><img src="./assets/images/create2-icon.png" alt="INITIATIVE"/></div>
+                       <div class="menuPage2-item-text">REQUEST POOL</div>
+                    </div>
+                    <div class="menuPage2-item">
+                        <div class="menuPage2-item-img"><img src="./assets/images/create3-icon.png" alt="INITIATIVE"/></div>
+                       <div class="menuPage2-item-text">IT & DIGITAL BUDGET SURVEY</div>
+                    </div>
+                    <div class="menuPage2-item">
+                        <div class="menuPage2-item-img"><img src="./assets/images/create4-icon.png" alt="INITIATIVE"/></div>
+                       <div class="menuPage2-item-text">R&D BUDGET SURVEY</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="div-block-105-left" style="">
+        <div class="rightBox1"></div>
+        <div class="showDownload">
+          <div class="row">
+                <div class="col-sm-9">Download Training Material</div>
+                <div class="col-sm-3">
+                  <div class="closeDownload"><i class="fa-solid fa-circle-xmark"></i></div>
+                </div>
+                              <div class="col-sm-12 col-sm-12 pt-3">
+                                    <div class="download-content-item">
+                                      <span class="download-content-item-no">01</span>
+                                      <span class="download-content-item-text">Annual CAPEX Project 2022</span>
+                                  </div>
+                                    <div class="download-content-item">
+                                      <span class="download-content-item-no">02</span>
+                                      <span class="download-content-item-text">Request CAPEX and Create WBS</span>
+                                  </div>
+                                    <div class="download-content-item">
+                                      <span class="download-content-item-no">03</span>
+                                      <span class="download-content-item-text">Approval Flow and Detail Information</span>
+                                  </div>
+                                    <div class="download-content-item">
+                                      <span class="download-content-item-no">04</span>
+                                      <span class="download-content-item-text">No Investment Project</span>
+                                  </div>
+                                    <div class="download-content-item">
+                                      <span class="download-content-item-no">05</span>
+                                      <span class="download-content-item-text">Ideamani Application Help</span>
+                                  </div>
+                                  <div class="download-content-item">
+                                      <span class="download-content-item-no">06</span>
+                                      <span class="download-content-item-text">Ideamani Application Test</span>
+                                  </div>
+                              </div>
+                            </div>
+        </div>
+        <div class="rightBoxContentDiv">
+          <div class="rightBoxContent-header">Quick Link</div>
+          <div class="rightBoxContent rightBoxContent2 rightBoxContent-page2">
+            <div class="rightBoxContent-item-page2">
+              <div class="item-pic"><img src="./assets/images/quicklink1-icon.png" alt="INITIATIVE"/></div>
+              <div class="item-text">VIEW ONLINE REPORT</div>
+            </div>
+             <div class="rightBoxContent-item-page2">
+               <div class="item-pic"><img src="./assets/images/quicklink2-icon.png" alt="INITIATIVE"/></div>
+              <div class="item-text">BUILD A REPORT</div>
+             </div>
+                <div class="rightBoxContent-item-page2">
+                    <div class="item-pic"><img src="./assets/images/quicklink3-icon.png" alt="INITIATIVE"/></div>
+                    <div class="item-text">e-LL</div>
+               </div>
+                  <div class="rightBoxContent-item-page2">
+                   <div class="item-pic"><img src="./assets/images/quicklink4-icon.png" alt="INITIATIVE"/></div>
+                    <div class="item-text">e-MoC</div>
+              </div>
+              <div class="rightBoxContent-item-page2">
+                   <div class="item-pic"><img src="./assets/images/quicklink5-icon.png" alt="INITIATIVE"/></div>
+                  <div class="item-text">PDD</div>
+              </div>
+                  <div class="rightBoxContent-item-page2">
+                 <div class="item-pic"><img src="./assets/images/quicklink6-icon.png" alt="INITIATIVE"/></div>
+                  <div class="item-text">R&D APPLICATIONS</div>
+              </div>
+               <div class="rightBoxContent-item-page2">
+                 <div class="item-pic"><img src="./assets/images/quicklink7-icon.png" alt="INITIATIVE"/></div>
+                  <div class="item-text">Corporate Target</div>
+              </div>
+              <div class="rightBoxContent-item-page2">
+                 <div class="item-pic"><img src="./assets/images/quicklink8-icon.png" alt="INITIATIVE"/></div>
+                  <div class="item-text">Corporate Assumption</div>
+              </div>
+              <div class="rightBoxContent-item-page2">
+                 <div class="item-pic"><img src="./assets/images/quicklink9-icon.png" alt="INITIATIVE"/></div>
+                  <div class="item-text">D&IT Governance</div>
+              </div>
+          </div>
+             <div class="rightBoxContent-header">Download Training Material</div>
+              <div class="rightBoxContent rightBoxContent2">
+                <div class="rightBoxContent-item-page2-collapse">CLICK HERE TO EXPAND</div>
+
+              </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="vdboBG divMainMenu">
+     
+    </div>
+    <div class='ripple-background'>
+      <div class='circle xxlarge shade1'></div>
+      <div class='circle xlarge shade2'></div>
+      <div class='circle large shade3'></div>
+      <div class='circle mediun shade4'></div>
+      <div class='circle small shade5'></div>
+    </div>
+
+   </section>
+   
+    <section>
+      <div class="footerPage1">
+        Copyright © 2022 PTT Global Chemical Public Company Limited. All right reserved
+      </div>
+    </section>
+    <div class="bottomBar" style="display: none;"></div>
+    <!--#############JS###############-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/kendoui.for.jquery.2022.1.119.commercial/js/kendo.all.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/information.js"></script>
+    <script src="./assets/js/sidebar.js"></script>
+    <script src="./assets/js/page2.js"></script>
+  </body>
+</html>

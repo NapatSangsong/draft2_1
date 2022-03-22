@@ -531,6 +531,15 @@ span.notification-bar-task {
     text-align: center;
     margin: 5px;
     cursor: pointer;
+        -webkit-transition: box-shadow 400ms ease,
+        -webkit-transform 400ms ease;
+        transition: box-shadow 400ms ease,
+        -webkit-transform 400ms ease;
+        transition: box-shadow 400ms ease,
+        transform 400ms ease;
+        transition: box-shadow 400ms ease,
+        transform 400ms ease,
+        -webkit-transform 400ms ease;
 }
 .rightBoxContent-item:hover{
      box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.51);
