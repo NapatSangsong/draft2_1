@@ -164,7 +164,7 @@
     padding-right: 15px;
 }
 .div-block-105-left {
-    background-color: rgb(0 122 198 / 50%);
+    background-color: rgb(0 122 198 / 80%);
     position: absolute;
     right: 0px;
     height: calc(100vh - 120px);
@@ -211,24 +211,24 @@ span.notification-bar-task {
 .circleMenu1 {
     /* background: -webkit-gradient(linear, left top, left bottom, from(#33c8c1), to(#119bd2));
     background: linear-gradient(#33c8c1 0%, #119bd2 100%); */
-       background: -webkit-gradient(linear, left top, left bottom, from(#05e8ba), to(#087ee1));
-       background: linear-gradient(#05e8ba 0%, #2e82ef 100%);
+       background-color: #007ea7;
+       background-image: linear-gradient(315deg, #007ea7 0%, #80ced7 74%);
 }
 .circleMenu2 {
     /* background: -webkit-gradient(linear, left top, left bottom, from(#fe8464), to(#fe6e9a));
     background: linear-gradient(#fe8464 0%, #fe6e9a 100%); */
-       background: -webkit-gradient(linear, left top, left bottom, from(#05e8ba), to(#087ee1));
-       background: linear-gradient(#05e8ba 0%, #2e82ef 100%);
+     background-color: #007ea7;
+     background-image: linear-gradient(315deg, #007ea7 0%, #80ced7 74%);
 }
 .circleMenu3 {
   /* background-color: #007ea7;
   background-image: linear-gradient(315deg, #007ea7 0%, #80ced7 74%); */
-     background: -webkit-gradient(linear, left top, left bottom, from(#05e8ba), to(#087ee1));
-     background: linear-gradient(#05e8ba 0%, #2e82ef 100%);
+     background-color: #007ea7;
+     background-image: linear-gradient(315deg, #007ea7 0%, #80ced7 74%);
 }
 .circleMenu4 {
-     background: -webkit-gradient(linear, left top, left bottom, from(#05e8ba), to(#087ee1));
-     background: linear-gradient(#05e8ba 0%, #2e82ef 100%);
+      background-color: #007ea7;
+      background-image: linear-gradient(315deg, #007ea7 0%, #80ced7 74%);
 }
 
 
@@ -657,3 +657,127 @@ z-index: 2000;
 .closeDownload:hover{
 color: #1991eb;
 }
+
+
+
+
+/* panel */
+#panelbar {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* 
+.k-panelbar{
+    background: transparent !important;
+    border: none !important;
+}
+.k-panelbar .k-panelbar-content{
+     background: transparent !important;
+}
+.k-state-highlight{
+     background: transparent !important;
+}
+ .details {
+     display: inline-block;
+     vertical-align: top;
+ }
+
+
+ .k-drag-clue,
+ .k-grid-header,
+ .k-grouping-header,
+ .k-header,
+ .k-menu,
+ .k-panelbar>.k-panelbar-header>.k-link,
+ .k-progressbar,
+ .k-state-highlight,
+ .k-tabstrip,
+ .k-tabstrip-items .k-item,
+ .k-toolbar{
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+ }
+ .k-panelbar>.k-item>.k-link,
+ .k-panelbar>.k-panelbar-header>.k-link{
+     color: #fff !important;
+     font-size: 1.2em;
+ }
+ .k-panelbar>.k-item,
+ .k-panelbar>.k-panelbar-header{
+     border:none !important;
+ } */
+
+ul#panelbar {
+    border: none;
+    background: none !important;
+    margin-top: 15px;
+}
+
+.k-panelbar .k-panelbar-content {
+    color: #428bca;
+    background: none !important;
+}
+
+.k-state-highlight {
+    background: none !important;
+    color: #333;
+}
+
+.k-drag-clue,
+.k-grid-header,
+.k-grouping-header,
+.k-header,
+.k-menu,
+.k-panelbar>.k-panelbar-header>.k-link,
+.k-progressbar,
+.k-state-highlight,
+.k-tabstrip,
+.k-tabstrip-items .k-item,
+.k-toolbar {
+    background-position: 50% 50%;
+    background-color: #65b8ff;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    /* padding: 
+    5px; */
+}
+
+.k-panelbar>.k-item>.k-link.k-state-selected,
+.k-panelbar>.k-panelbar-header>.k-link.k-state-selected {
+    color: #fff;
+    background-color: #65b8ff;
+    border: none;
+}
+
+.k-panelbar>.k-item>.k-link.k-state-selected,
+.k-panelbar>.k-panelbar-header>.k-link.k-state-selected:hover {
+    color: #fff;
+    background-color: #65b8ff;
+    border: none;
+}
+
+.k-panelbar>.k-item>.k-link.k-state-selected,
+.k-panelbar>.k-panelbar-header>.k-link.k-state-selected:focus {
+    color: #fff;
+    background-color: #65b8ff;
+    border: none;
+}
+
+.k-panelbar>.k-item,
+.k-panelbar>.k-panelbar-header {
+    border-width: 0;
+    border-style: solid;
+    border-color: inherit;
+    display: block;
+    border: none !important;
+}
+
+.k-panelbar>.k-item>.k-link.k-state-selected,
+.k-panelbar>.k-panelbar-header>.k-link.k-state-selected {
+    box-shadow: none !important;
+}
+
+/* panel */
