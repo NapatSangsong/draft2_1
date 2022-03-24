@@ -130,13 +130,14 @@
         -webkit-transform 400ms ease;
         background-color:#036c9a;
         cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            align-content: center;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        border:8px solid #fff;
 }
 .menuPage2-item:not(.menuPage2-item-disable):hover {
     box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.51);
