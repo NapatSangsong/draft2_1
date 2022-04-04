@@ -238,3 +238,29 @@ var BenefitData = [
     isDelete: false,
   },
 ];
+var VOCData = [
+  {
+    No: "1",
+    VOCProjectCode: "VOC-18120205",
+    VOCInitiator: "John S <x-xx-xx/1234>",
+    VOCApprovedDate: new Date(),
+    CommentFromVOC: "",
+    IsTerminated: true,
+    IsShowTerminated: true,
+    IsRemove: false,
+    IsShowRemove: false,
+    IsNew: false,
+  },
+  {
+    No: "2",
+    VOCProjectCode: "VOC-1812020ุ",
+    VOCInitiator: "John S <x-xx-xx/1234>",
+    VOCApprovedDate: new Date(),
+    CommentFromVOC: "",
+    IsTerminated: false,
+    IsShowTerminated: true,
+    IsRemove: true,
+    IsShowRemove: true,
+    IsNew: false,
+  },
+];
