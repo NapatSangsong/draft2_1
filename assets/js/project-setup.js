@@ -1,5 +1,15 @@
 let _dataItem;
 $("document").ready(function () {
+  $(".RequiredEcoDesignCriteria").hide();
+  $(".RequiredNAPD3").hide();
+  $(".RequiredNAPD3Show").show();
+
+  let DisplayMode = getParameterByName("DisplayMode");
+  if (DisplayMode == "NAPD3") {
+    $(".RequiredNAPD3").show();
+    $(".RequiredNAPD3Show").hide();
+  }
+
   $("#SubmitProjectSetup").click(function () {
     SubmitProjectSetupInfo();
   });
@@ -20,6 +30,13 @@ $("document").ready(function () {
       checked: "YES",
       unchecked: "NO",
     },
+    change: function (e) {
+      if (e.checked) {
+        $(".RequiredEcoDesignCriteria").show();
+      } else {
+        $(".RequiredEcoDesignCriteria").hide();
+      }
+    },
   });
   // Page_Init();
   $("#ProjectType").kendoDropDownList({
@@ -30,6 +47,15 @@ $("document").ready(function () {
     index: -1,
     dataSource: ["New product", "Improvement", "Market Defending"],
   });
+  $("#ProjectCategory").kendoDropDownList({
+    dataTextField: "",
+    dataValueField: "",
+    filter: "contains",
+    suggest: true,
+    index: -1,
+    dataSource: ["Transformation", "x", "y"],
+  });
+
   $("#BusinessUnit").kendoDropDownList({
     dataTextField: "",
     dataValueField: "",
@@ -38,6 +64,49 @@ $("document").ready(function () {
     index: -1,
     dataSource: ["GGC", "EOB", "PHN", "DYCT"],
   });
+  $("#MainSegment").kendoDropDownList({
+    dataTextField: "",
+    dataValueField: "",
+    filter: "contains",
+    suggest: true,
+    index: -1,
+    dataSource: [
+      "Laminations",
+      "Non Laminations",
+      "Stretch Wrape Films",
+      "Strech hood",
+      "Shrink Films",
+      "Heavy Duty Bags",
+      "Extrusion Coating",
+    ],
+  });
+  $("#SubSegment").kendoDropDownList({
+    dataTextField: "",
+    dataValueField: "",
+    filter: "contains",
+    suggest: true,
+    index: -1,
+    dataSource: [
+      "Dry food packaging",
+      "Fresh food packaging",
+      "Liquid food packaging",
+      "Snack packaging",
+    ],
+  });
+  $("#CustomerType").kendoDropDownList({
+    dataTextField: "",
+    dataValueField: "",
+    filter: "contains",
+    suggest: true,
+    index: -1,
+    dataSource: [
+      "Customer Type 1",
+      "Customer Type 2",
+      "Customer Type 3",
+      "Customer Type 4",
+    ],
+  });
+
   $("#Application").kendoDropDownList({
     dataTextField: "",
     dataValueField: "",
@@ -66,6 +135,30 @@ $("document").ready(function () {
     suggest: true,
     index: -1,
     dataSource: ["Packaging", "Construction", "E&E", "Automotive"],
+  });
+  $("#BusinessImpact").kendoDropDownList({
+    dataTextField: "",
+    dataValueField: "",
+    filter: "contains",
+    suggest: true,
+    index: -1,
+    dataSource: ["1", "2", "3"],
+  });
+  $("#StrategicPriority").kendoDropDownList({
+    dataTextField: "",
+    dataValueField: "",
+    filter: "contains",
+    suggest: true,
+    index: -1,
+    dataSource: ["1", "2", "3"],
+  });
+  $("#StrategicObjective").kendoDropDownList({
+    dataTextField: "",
+    dataValueField: "",
+    filter: "contains",
+    suggest: true,
+    index: -1,
+    dataSource: ["1", "2", "3"],
   });
   $(".ddlTest").kendoDropDownList({
     index: -1,
@@ -489,6 +582,51 @@ $("document").ready(function () {
       // Use the value of the widget
     },
   });
+
+  $("#VOCAdd").click(function () {
+    var dataSource = $("#listView").data("kendoListView").dataSource;
+    dataSource.add({
+      No: dataSource.data().length + 1,
+      VOCProjectCode: "",
+      VOCInitiator: "",
+      VOCApprovedDate: new Date(),
+      CommentFromVOC: "",
+      IsTerminated: true,
+      IsShowTerminated: true,
+      IsRemove: true,
+      IsShowRemove: true,
+      IsNew: true,
+    });
+    dataSource.sync();
+  });
+  $("#listView").kendoListView({
+    dataSource: {
+      data: VOCData,
+      schema: {
+        model: {
+          fields: {
+            No: { type: "string" },
+            VOCProjectCode: { type: "string" },
+            VOCInitiator: { type: "string" },
+            VOCApprovedDate: { type: "date" },
+            CommentFromVOC: { type: "string" },
+            IsTerminated: { type: "boolean" },
+            IsShowTerminated: { type: "boolean" },
+            IsRemove: { type: "boolean" },
+            IsShowRemove: { type: "boolean" },
+          },
+        },
+      },
+      pageSize: 21,
+    },
+    template: kendo.template($("#template").html()),
+    pageable: false,
+    dataBound: function () {
+      $(".vocApprovedDate").kendoDatePicker({
+        format: "dd/MM/yyyy",
+      });
+    },
+  });
 });
 function KPIYearDateEditor(container, options) {
   $('<input required name="' + options.field + '"/>')
@@ -654,4 +792,13 @@ function SubmitProjectSetupInfo() {
 
   GoUpToValidate();
   //submit
+}
+
+function getParameterByName(name, url = window.location.href) {
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return "";
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
 }

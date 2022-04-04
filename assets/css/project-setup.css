@@ -40,3 +40,24 @@
     font-size: 0.9em;
     padding-top: 4px;
 }
+
+div#listView {
+    border: none;
+    background: none;
+    box-shadow: none;
+    padding-left: 20px;
+}
+div#listView .k-listview-content {
+    overflow: initial !important;
+}
+
+div#listView  .row.k-listview-item {
+    margin-bottom: 15px;
+}
+.RequiredEcoDesignCriteria{
+    /* display: none; */
+}
+
+span.textarea.textareaDisabledSpan {
+    background: #e9ecef;
+}

@@ -374,6 +374,19 @@
                         ></select>
                       </div>
                     </div>
+                    <div class="col-sm-4 RequiredNAPD3">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Project Category
+                          <span class="content-required">*</span></label
+                        >
+                        <select
+                          id="ProjectCategory"
+                          class=""
+                          style="width: 80%"
+                        ></select>
+                      </div>
+                    </div>
                     <div class="col-sm-4">
                       <div class="form-group content-form">
                         <label for="exampleFormControlFile1"
@@ -386,39 +399,17 @@
                         ></select>
                       </div>
                     </div>
+                    <div class="col-sm-4 RequiredNAPD3Show"></div>
                     <div class="col-sm-4">
                       <div class="form-group content-form">
                         <label for="exampleFormControlFile1"
                           >Industry Segmentation
-                          <span class="content-required">*</span></label
-                        >
+                        </label>
                         <select
                           id="IndustrySegmentation"
                           class=""
                           style="width: 80%"
                         ></select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-4">
-                      <div class="form-group content-form">
-                        <label for="exampleFormControlFile1"
-                          >Project / Material
-                          <span class="content-required">*</span></label
-                        >
-                        <select
-                          id="Project Type"
-                          class="ddlTest"
-                          style="width: 80%"
-                        >
-                          <option value=""></option>
-                          <option>Project - Material #0</option>
-                          <option>Project - Material #1</option>
-                          <option>Project - Material #2</option>
-                          <option>Project - Material #3</option>
-                          <option>Project - Material #4</option>
-                        </select>
                       </div>
                     </div>
                     <div class="col-sm-4">
@@ -437,19 +428,107 @@
                     <div class="col-sm-4">
                       <div class="form-group content-form">
                         <label for="exampleFormControlFile1"
-                          >Estimated Launch Date</label
+                          >Product / Material
+                          <span class="content-required">*</span></label
                         >
-                        <input
-                          class="form-control form-control-sm dateSelect"
-                          id="Proposed-Start-Date"
-                          type="text"
-                          value=""
-                          placeholder=""
+                        <select
+                          id="ProductMaterial"
+                          class="ddlTest"
                           style="width: 80%"
-                        />
+                        >
+                          <option value=""></option>
+                          <option>Project - Material #0</option>
+                          <option>Project - Material #1</option>
+                          <option>Project - Material #2</option>
+                          <option>Project - Material #3</option>
+                          <option>Project - Material #4</option>
+                        </select>
                       </div>
                     </div>
                   </div>
+                  <div class="row pt-1">
+                    <div class="col-sm-4 RequiredNAPD3">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Main Segment
+                          <span class="content-required">*</span></label
+                        >
+                        <select
+                          id="MainSegment"
+                          class=""
+                          style="width: 80%"
+                        ></select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 RequiredNAPD3">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Sub Segment
+                          <span class="content-required">*</span>
+                        </label>
+                        <select
+                          id="SubSegment"
+                          class=""
+                          style="width: 80%"
+                        ></select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4 RequiredNAPD3">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Customer Type
+                          <span class="content-required">*</span></label
+                        >
+                        <select
+                          id="CustomerType"
+                          class=""
+                          style="width: 80%"
+                        ></select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row pt-1">
+                    <div class="col-sm-4">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Business Impact
+                          <span class="content-required">*</span></label
+                        >
+                        <select
+                          id="BusinessImpact"
+                          class=""
+                          style="width: 80%"
+                        ></select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Strategic Priority
+                          <span class="content-required">*</span>
+                        </label>
+                        <select
+                          id="StrategicPriority"
+                          class=""
+                          style="width: 80%"
+                        ></select>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Strategic Objective
+                          <span class="content-required">*</span></label
+                        >
+                        <select
+                          id="StrategicObjective"
+                          class=""
+                          style="width: 80%"
+                        ></select>
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="row">
                     <div class="col-sm-4">
                       <div class="form-group content-form">
@@ -491,7 +570,21 @@
                         </select>
                       </div>
                     </div>
-                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                      <div class="form-group content-form">
+                        <label for="exampleFormControlFile1"
+                          >Estimated Launch Date</label
+                        >
+                        <input
+                          class="form-control form-control-sm dateSelect"
+                          id="Proposed-Start-Date"
+                          type="text"
+                          value=""
+                          placeholder=""
+                          style="width: 80%"
+                        />
+                      </div>
+                    </div>
                   </div>
                   <div class="row">
                     <div class="col-sm-4">
@@ -531,7 +624,32 @@
                       <div class="sep"></div>
                     </div>
                   </div>
-                  <div class="row pt-2">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="content-bar-header">
+                        <span>Related VOC</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div id="listView"></div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="col-sm-12">
+                        <div class="form-group content-form mgt5">
+                          <button
+                            type="submit"
+                            class="btn btn-primary btn-gc"
+                            id="VOCAdd"
+                          >
+                            <i class="fa-light fa-circle-plus"></i> Add VOC
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row pt-2" style="display: none">
                     <div class="col-auto">
                       <div class="form-group content-form">
                         <label
@@ -681,7 +799,10 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-12"></div>
+                  </div>
+                  <div class="row" style="">
+                    <div class="col-sm-12" style="display: none">
                       <div class="form-group content-form">
                         <label
                           for="exampleFormControlFile1"
@@ -704,7 +825,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 mt-3">
                       <div class="form-group content-form">
                         <label for="exampleFormControlFile1"
                           >Background
@@ -901,7 +1022,7 @@
                       <div class="sep"></div>
                     </div>
                   </div>
-                  <div class="row">
+                  <div class="row RequiredEcoDesignCriteria">
                     <div class="col-sm-3">
                       <div class="form-group content-form">
                         <label for="exampleFormControlFile1"
@@ -929,7 +1050,7 @@
                       <div class="sep"></div>
                     </div>
                   </div>
-                  <div class="row">
+                  <div class="row RequiredEcoDesignCriteria">
                     <div class="col-sm-3">
                       <div class="form-group content-form">
                         <label for="exampleFormControlFile1"
@@ -946,7 +1067,7 @@
                       <div class="sep"></div>
                     </div>
                   </div>
-                  <div class="row">
+                  <div class="row RequiredEcoDesignCriteria">
                     <div class="col-sm-3">
                       <div class="form-group content-form">
                         <label for="exampleFormControlFile1"
@@ -1164,3 +1285,115 @@
     <script src="./assets/js/project-setup.js"></script>
   </body>
 </html>
+<script type="text/x-kendo-template" id="template">
+  <div class="row">
+        <div class="col-sm-1">
+          <div class="form-group content-form">
+            <label
+              for="exampleFormControlFile1"
+              class="k-label k-input-label"
+              >No</label
+            >
+            <input
+              class="form-control form-control-sm k-textbox"
+              type="text"
+              placeholder=""
+              disabled
+              value="#:No#"
+            />
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group content-form">
+            <label
+              for="exampleFormControlFile1"
+              class="k-label k-input-label"
+              >VOC Project Code</label
+            >
+            <input
+              class="form-control form-control-sm k-textbox"
+              type="text"
+              placeholder=""
+              #if(!IsNew) {#disabled #}#
+              value="#:VOCProjectCode#"
+            />
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="form-group content-form">
+            <label
+              for="exampleFormControlFile1"
+              class="k-label k-input-label"
+              >VOC Initiator</label
+            >
+            <input
+              class="form-control form-control-sm k-textbox"
+              type="text"
+              placeholder=""
+              #if(!IsNew) {#disabled #}#
+              value="#:VOCInitiator#"
+            />
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group content-form">
+            <label
+              for="exampleFormControlFile1"
+              class="k-label k-input-label"
+              >VOC Approved Date</label
+            >
+            <input
+              class="form-control form-control-sm k-textbox vocApprovedDate"
+              type="text"
+              placeholder=""
+              #if(!IsNew) {#disabled #}#
+              value="#:kendo.toString(new Date(VOCApprovedDate), 'dd/MMyyyy')#"
+            />
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="form-group content-form">
+            <label
+              for="exampleFormControlFile1"
+              class="k-label k-input-label"
+              >&nbsp;</label
+            >
+          #if(IsShowTerminated)
+          {#
+            <button
+              type="submit"
+              class="btn btn-primary"
+              id="SaveDraftBTN"
+              #if(!IsTerminated) {#disabled #}#
+            >
+              Terminated
+            </button>
+          #}#
+
+          #if(IsShowRemove)
+          {#
+            <button
+              type="submit"
+              class="btn btn-primary"
+              id="SubmitBTN"
+            >
+              Remove
+            </button>
+          #}#
+          </div>
+        </div>
+        <div class="col-sm-6">
+           <div class="form-group content-form">
+            <label for="exampleFormControlFile1"
+              >Comment from VOC</label
+            >
+              <span
+              class="textarea  #if(!IsNew) {# textareaDisabledSpan #}#"
+              role="textbox"
+              #if(IsNew) {#contenteditable #}else{# disabled #}#
+
+            ></span>
+          </div>
+        </div>
+      </div>
+</script>
