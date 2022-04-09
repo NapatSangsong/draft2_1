@@ -137,11 +137,11 @@ div#navbarSupportedContent {
     border-top-left-radius: 37px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 2%;
-    font-size: 1.2em;
+    font-size: 1.3em;
     line-height: 1.2em;
     color: #fff;
     transition: all .2s ease-out;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -149,7 +149,16 @@ div#navbarSupportedContent {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-
+    font-weight: 200;
+}
+li.disable-create-item {
+    opacity: 0.5;
+    cursor: default;
+    background: black;
+}
+li.gc-content-quick-link-li.disable-quick-link {
+    opacity: 0.5;
+    cursor: default;
 }
 .gc-content-create-item-img {
     margin-bottom: 10px;
@@ -200,7 +209,21 @@ div#navbarSupportedContent {
     flex-wrap: nowrap;
     flex-direction: row;
     margin: 10px;
+    cursor: pointer;
+    border:1px solid transparent;
+    padding-right:20px;
+    transition: all .2s ease-in;
 }
+.gc-content-quick-link-li:hover{
+    border:1px solid #ffffff;
+    background-color: rgba(255,255,255,0.20);
+    transition: all .2s ease-in;
+}
+.gc-content-quick-link-li:hover .gc-content-quick-link-li-text{
+    color:#fff;
+    transition: all .2s ease-in;
+}
+
 ul.gc-content-quick-link-ul {
     padding: 0px;
     display: flex;

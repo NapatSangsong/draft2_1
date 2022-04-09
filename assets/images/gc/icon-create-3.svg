@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="47" height="56.661" viewBox="0 0 47 56.661">
+  <g id="Group_597" data-name="Group 597" transform="translate(-10837 -126)">
+    <g id="groups_black_24dp" transform="translate(10841.942 144.982)">
+      <rect id="Rectangle_323" data-name="Rectangle 323" width="37.679" height="37.679" transform="translate(0.332 0)" fill="none"/>
+      <g id="Group_488" data-name="Group 488" transform="translate(0 9.508)">
+        <path id="Path_334" data-name="Path 334" d="M6.293,17.013a3.146,3.146,0,1,0-3.146-3.146A3.156,3.156,0,0,0,6.293,17.013Zm1.778,1.731a10.985,10.985,0,0,0-1.778-.157,10.935,10.935,0,0,0-4.374.912A3.163,3.163,0,0,0,0,22.409v2.47H7.079V22.346A7.077,7.077,0,0,1,8.071,18.743Zm23.394-1.731a3.146,3.146,0,1,0-3.146-3.146A3.156,3.156,0,0,0,31.464,17.013Zm6.293,5.4a3.163,3.163,0,0,0-1.919-2.91,10.7,10.7,0,0,0-6.151-.755,7.077,7.077,0,0,1,.991,3.6v2.533h7.079ZM25.549,18.035a16.429,16.429,0,0,0-6.67-1.416,16.693,16.693,0,0,0-6.67,1.416,4.7,4.7,0,0,0-2.769,4.311v2.533H28.318V22.346A4.7,4.7,0,0,0,25.549,18.035ZM12.7,21.732c.142-.362.2-.614,1.432-1.086a13.252,13.252,0,0,1,9.5,0c1.211.472,1.274.724,1.432,1.086ZM18.879,9.146a1.573,1.573,0,1,1-1.573,1.573,1.578,1.578,0,0,1,1.573-1.573m0-3.146a4.72,4.72,0,1,0,4.72,4.72A4.713,4.713,0,0,0,18.879,6Z" transform="translate(0 -6)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Rectangle_400" data-name="Rectangle 400" transform="translate(10837 126)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4">
+      <rect width="47" height="27" stroke="none"/>
+      <rect x="2" y="2" width="43" height="23" fill="none"/>
+    </g>
+    <path id="Path_389" data-name="Path 389" d="M9693.507,508.463l5.4-3.89,4.085,2.783,8.626-7.048,3.925,3.375,8.63-5.368" transform="translate(1150.657 -363.035)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Polygon_6" data-name="Polygon 6" d="M3.768,0,7.536,6.782H0Z" transform="translate(10876.047 129.957) rotate(57)" fill="#fff"/>
+  </g>
+</svg>
