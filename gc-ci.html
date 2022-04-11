@@ -50,9 +50,9 @@
     <!--====== PRELOADER PART ENDS ======-->
 
     <!--====== NAV PART START ======-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-gc navbar-fixed-top">
       <a class="navbar-brand" href="#">
-        <img src="./assets/images/logo-gc/logo-gc.svg" height="" alt="" />
+        <img src="./assets/images/logo-gc/logo-gc-white.svg" height="" alt="" />
       </a>
       <button
         class="navbar-toggler"
@@ -68,6 +68,37 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown m-0">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownRecentProject"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-clock-rotate-left" id="recent-icon"></i>
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownRecentProject"
+            >
+              <a class="dropdown-item" href="#"
+                >2022-00001 : Development of super high heat ABS for home
+                appliance parts</a
+              >
+              <a class="dropdown-item" href="#"
+                >2022-00002 : Toluene methylation process development</a
+              >
+              <a class="dropdown-item" href="#"
+                >2022-00003 : A Simulation Model of Ethylene Oxide and Ethylene
+                Glycol Plant</a
+              >
+              <!-- <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">All Training</a> -->
+            </div>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#"
               >Initiatives (2) <span class="sr-only">(current)</span></a
@@ -108,16 +139,19 @@
         </ul>
         <div>
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#"
-                ><img src="./assets/images/gc/search_black_24dp.svg" alt="" />
-                Search</a
-              >
+            <li class="nav-item gc-ci-search-click">
+              <div class="searchBox">
+                <input class="searchInput" type="text" name="" placeholder="" />
+                <button class="searchButton" href="#">
+                  <img src="./assets/images/gc/search_white_24dp.svg" alt="" />
+                  Search
+                </button>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"
                 ><img
-                  src="./assets/images/gc/account_circle_black_24dp.svg"
+                  src="./assets/images/gc/account_circle_white_24dp.svg"
                   alt=""
                 />
                 Account</a
@@ -126,7 +160,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#"
                 ><img
-                  src="./assets/images/gc/admin_panel_settings_black_24dp.svg"
+                  src="./assets/images/gc/admin_panel_settings_white_24dp.svg"
                   alt=""
                 />
                 Admin</a
@@ -135,7 +169,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">
                 <img
-                  src="./assets/images/gc/help_outline_black_24dp.svg"
+                  src="./assets/images/gc/help_outline_white_24dp.svg"
                   alt=""
                 />
                 Help</a
@@ -192,49 +226,94 @@
               <div class="gc-content-quick-link">
                 <ul class="gc-content-quick-link-ul">
                   <li class="gc-content-quick-link-li">
-                    <div class="gc-content-quick-link-li-img"></div>
+                    <div class="gc-content-quick-link-li-img">
+                      <img
+                        src="./assets/images/quicklink1-icon.png"
+                        alt="INITIATIVE"
+                      />
+                    </div>
                     <div class="gc-content-quick-link-li-text">
                       View Online Reports
                     </div>
                   </li>
-                  <li class="gc-content-quick-link-li disable-quick-link">
-                    <div class="gc-content-quick-link-li-img"></div>
+                  <li class="gc-content-quick-link-li">
+                    <div class="gc-content-quick-link-li-img">
+                      <img
+                        src="./assets/images/quicklink2-icon.png"
+                        alt="INITIATIVE"
+                      />
+                    </div>
                     <div class="gc-content-quick-link-li-text">
                       Build a Reports
                     </div>
                   </li>
                   <li class="gc-content-quick-link-li">
-                    <div class="gc-content-quick-link-li-img"></div>
+                    <div class="gc-content-quick-link-li-img">
+                      <img
+                        src="./assets/images/quicklink3-icon.png"
+                        alt="INITIATIVE"
+                      />
+                    </div>
                     <div class="gc-content-quick-link-li-text">e-LL</div>
                   </li>
                   <li class="gc-content-quick-link-li">
-                    <div class="gc-content-quick-link-li-img"></div>
+                    <div class="gc-content-quick-link-li-img">
+                      <img
+                        src="./assets/images/quicklink4-icon.png"
+                        alt="INITIATIVE"
+                      />
+                    </div>
                     <div class="gc-content-quick-link-li-text">e-MoC</div>
                   </li>
                   <li class="gc-content-quick-link-li">
-                    <div class="gc-content-quick-link-li-img"></div>
+                    <div class="gc-content-quick-link-li-img">
+                      <img
+                        src="./assets/images/quicklink5-icon.png"
+                        alt="INITIATIVE"
+                      />
+                    </div>
                     <div class="gc-content-quick-link-li-text">PDD</div>
                   </li>
                   <li class="gc-content-quick-link-li">
-                    <div class="gc-content-quick-link-li-img"></div>
+                    <div class="gc-content-quick-link-li-img">
+                      <img
+                        src="./assets/images/quicklink6-icon.png"
+                        alt="INITIATIVE"
+                      />
+                    </div>
                     <div class="gc-content-quick-link-li-text">
                       R&D Application
                     </div>
                   </li>
                   <li class="gc-content-quick-link-li">
-                    <div class="gc-content-quick-link-li-img"></div>
+                    <div class="gc-content-quick-link-li-img">
+                      <img
+                        src="./assets/images/quicklink7-icon.png"
+                        alt="INITIATIVE"
+                      />
+                    </div>
                     <div class="gc-content-quick-link-li-text">
                       Corporate Target
                     </div>
                   </li>
                   <li class="gc-content-quick-link-li">
-                    <div class="gc-content-quick-link-li-img"></div>
+                    <div class="gc-content-quick-link-li-img">
+                      <img
+                        src="./assets/images/quicklink8-icon.png"
+                        alt="INITIATIVE"
+                      />
+                    </div>
                     <div class="gc-content-quick-link-li-text">
                       Corporate Assumption
                     </div>
                   </li>
                   <li class="gc-content-quick-link-li">
-                    <div class="gc-content-quick-link-li-img"></div>
+                    <div class="gc-content-quick-link-li-img">
+                      <img
+                        src="./assets/images/quicklink9-icon.png"
+                        alt="INITIATIVE"
+                      />
+                    </div>
                     <div class="gc-content-quick-link-li-text">
                       D&IT Governance
                     </div>
