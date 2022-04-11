@@ -120,7 +120,9 @@ body{
   background: transparent;
 
 }
-
+.bg-white .searchButton{
+     color: #0057B8;
+}
 .searchButton {
     color: #ffffff;
     /* float: right; */
@@ -551,7 +553,7 @@ div#navbarSupportedContent {
     font-size: 15px;
 }
 .gc-content-home {
-    height: calc(100vh -  72px);
+    height: calc(100vh -  78px);
     padding: 3%;
 }
 
