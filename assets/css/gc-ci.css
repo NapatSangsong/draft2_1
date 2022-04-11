@@ -105,6 +105,16 @@ body{
     right: -80px;
     color: #0057B8;
 }
+.bg-white .searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    position: relative;
+    border: 1px solid #0057B8;
+    right: -80px;
+    color: #0057B8;
+}
 
 .searchBox:hover > .searchButton {
   background: transparent;
@@ -126,10 +136,38 @@ body{
     padding: 0px;
     margin: 0px;
 }
+.bg-white .searchButton {
+    color: #0056b3;
+    /* float: right; */
+    /* width: 40px; */
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    padding: 0px;
+    margin: 0px;
+}
 
 .searchInput {
     border:none;
     background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+.bg-white .searchInput {
+    border:none;
+    background: #fff;
     outline:none;
     float:left;
     padding: 0;
