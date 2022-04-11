@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>GC Accolade</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="./assets/lib/bootstrap-4.1.3-dist/css/bootstrap.min.css"
+    />
+
+    <link
+      href="./assets/lib/fa-pro-6.0.0-web/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/gc-ci.css" rel="stylesheet" />
+    <link href="./assets/css/gc-ci-preload.css" rel="stylesheet" />
+    <link
+      href="./assets/lib/kendoui.for.jquery.2022.1.119.commercial/styles/kendo.common-bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="./assets/lib/kendoui.for.jquery.2022.1.119.commercial/styles/kendo.bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--====== PRELOADER PART START ======-->
+    <div class="preloader">
+      <div class="loader">
+        <div class="spinner">
+          <div class="spinner-container">
+            <div class="spinner-rotator">
+              <div class="spinner-left">
+                <div class="spinner-circle"></div>
+              </div>
+              <div class="spinner-right">
+                <div class="spinner-circle"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--====== PRELOADER PART ENDS ======-->
+
+    <!--====== NAV PART START ======-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-gc navbar-fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/images/logo-gc/logo-gc-white.svg" height="" alt="" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown m-0">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownRecentProject"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-clock-rotate-left" id="recent-icon"></i>
+            </a>
+            <div
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownRecentProject"
+            >
+              <a class="dropdown-item" href="#"
+                >2022-00001 : Development of super high heat ABS for home
+                appliance parts</a
+              >
+              <a class="dropdown-item" href="#"
+                >2022-00002 : Toluene methylation process development</a
+              >
+              <a class="dropdown-item" href="#"
+                >2022-00003 : A Simulation Model of Ethylene Oxide and Ethylene
+                Glycol Plant</a
+              >
+              <!-- <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">All Training</a> -->
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              >Initiatives (2) <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Task (2)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reports</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Training
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#"
+                >01 : Annual CAPEX Project 2022</a
+              >
+              <a class="dropdown-item" href="#"
+                >02 : Request CAPEX and Create WBS</a
+              >
+              <a class="dropdown-item" href="#"
+                >03 : Approval Flow and Detail Information</a
+              >
+              <!-- <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">All Training</a> -->
+            </div>
+          </li>
+        </ul>
+        <div>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item gc-ci-search-click">
+              <div class="searchBox">
+                <input class="searchInput" type="text" name="" placeholder="" />
+                <button class="searchButton" href="#">
+                  <img src="./assets/images/gc/search_white_24dp.svg" alt="" />
+                  Search
+                </button>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img
+                  src="./assets/images/gc/account_circle_white_24dp.svg"
+                  alt=""
+                />
+                Account</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img
+                  src="./assets/images/gc/admin_panel_settings_white_24dp.svg"
+                  alt=""
+                />
+                Admin</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img
+                  src="./assets/images/gc/help_outline_white_24dp.svg"
+                  alt=""
+                />
+                Help</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--====== NAV PART END ======-->
+
+    <!--====== CONTAINER PART END ======-->
+    <section>
+      <div class="container-fluid">
+        <div class="gc-ci-top-information">
+          <div class="row">
+            <div class="col-lg-12 col-sm-12 d-flex justify-content-end">
+              <ul class="gc-ci-top-information-control">
+                <li>
+                  <span>General Information</span>
+                </li>
+                <li>
+                  <span>PIM Information</span>
+                </li>
+                <li>
+                  <span>Risk</span>
+                  <div class="sidebarActive zoom-in-out-box">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                  </div>
+                </li>
+                <li>
+                  <span>Gate Information</span>
+                </li>
+                <li>
+                  <span>Gate & Key Milestones</span>
+                  <div class="sidebarActive zoom-in-out-box">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                  </div>
+                </li>
+                <li>
+                  <span>Progress & Execution Milestones</span>
+                  <div class="sidebarActive zoom-in-out-box">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                  </div>
+                </li>
+                <li>
+                  <span>Timesheet</span>
+                  <div class="sidebarActive zoom-in-out-box">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                  </div>
+                </li>
+                <li>
+                  <span>Decarbon</span>
+                </li>
+                <li>
+                  <span>Team</span>
+                </li>
+                <li>
+                  <span>Execution KPI</span>
+                </li>
+                <li>
+                  <span>Lesson Learned</span>
+                </li>
+                <li>
+                  <span>Best Practice</span>
+                </li>
+                <li>
+                  <span>Project Documents</span>
+                </li>
+                <li>
+                  <span>Project Document Database (PDD)</span>
+                </li>
+                <li>
+                  <span>MoC</span>
+                </li>
+                <li>
+                  <span>Reports</span>
+                </li>
+                <li>
+                  <span>Notes</span>
+                </li>
+                <li>
+                  <span>Contact IO</span>
+                </li>
+                <li>
+                  <span>History Log</span>
+                </li>
+                <li>
+                  <span>Admin</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-sm-12">
+              <div class="initiative-name-title">
+                INITIATIVE: 2022-00003 - A Simulation Model of Ethylene Oxide
+                and Ethylene Glycol Plant
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-sm-12">
+              <ul class="initiative-stage-gate">
+                <li>
+                  <div class="initiative-stage-gate-top">
+                    <span class="initiative-stage-gate-top-1"></span>
+                    <span class="initiative-stage-gate-top-2"></span>
+                  </div>
+                  <div
+                    class="initiative-stage-gate-box initiative-stage-gate-box-first initiative-stage-gate-item-current"
+                  >
+                    <span class="initiative-stage-gate-box-1"
+                      >Start: Idea Approval</span
+                    >
+                    <span class="initiative-stage-gate-box-2"
+                      >01 April 2022</span
+                    >
+                    <div class="initiative-stage-gate-box-gate">
+                      <div class="initiative-stage-gate-box-gate-diamond"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="initiative-stage-gate-top">
+                    <span class="initiative-stage-gate-top-1"
+                      >Gate O: Pass</span
+                    >
+                    <span class="initiative-stage-gate-top-2"
+                      >- 06 APR 2022</span
+                    >
+                  </div>
+                  <div
+                    class="initiative-stage-gate-box initiative-stage-gate-item-completed"
+                  >
+                    <span class="initiative-stage-gate-box-1"
+                      >Stage 0: Idea Definition</span
+                    >
+                    <span class="initiative-stage-gate-box-2">Completed</span>
+                    <div class="initiative-stage-gate-box-gate">
+                      <div class="initiative-stage-gate-box-gate-diamond"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="initiative-stage-gate-top">
+                    <span class="initiative-stage-gate-top-1"
+                      >Gate 1 & 2: Pass</span
+                    >
+                    <span class="initiative-stage-gate-top-2"
+                      >- 08 APR 2022</span
+                    >
+                  </div>
+                  <div
+                    class="initiative-stage-gate-box initiative-stage-gate-item-incomplete"
+                  >
+                    <span class="initiative-stage-gate-box-1"
+                      >Stage 1: Scoping</span
+                    >
+                    <span class="initiative-stage-gate-box-2">Incomplete</span>
+                    <div class="initiative-stage-gate-box-gate">
+                      <div class="initiative-stage-gate-box-gate-diamond"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="initiative-stage-gate-top">
+                    <span class="initiative-stage-gate-top-1"></span>
+                    <span class="initiative-stage-gate-top-2"></span>
+                  </div>
+                  <div
+                    class="initiative-stage-gate-box initiative-stage-gate-item-inprogress"
+                  >
+                    <span class="initiative-stage-gate-box-1"
+                      >Stage 2: Feasibility</span
+                    >
+                    <span class="initiative-stage-gate-box-2">In progress</span>
+                    <div class="initiative-stage-gate-box-gate">
+                      <div
+                        class="initiative-stage-gate-box-gate-diamond initiative-stage-gate-box-gate-diamond-inprogress"
+                      ></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="initiative-stage-gate-top">
+                    <span
+                      class="initiative-stage-gate-top-1 initiative-stage-gate-top-1-inprogress"
+                      >Gate 3 & 4</span
+                    >
+                    <span class="initiative-stage-gate-top-2"> </span>
+                  </div>
+                  <div
+                    class="initiative-stage-gate-box initiative-stage-gate-item-notstarted-text"
+                  >
+                    <span class="initiative-stage-gate-box-1"
+                      >Stage 3: Lab Scale</span
+                    >
+                    <span class="initiative-stage-gate-box-2">...</span>
+                    <div class="initiative-stage-gate-box-gate">
+                      <div class="initiative-stage-gate-box-gate-diamond"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="initiative-stage-gate-top">
+                    <span class="initiative-stage-gate-top-1"></span>
+                    <span class="initiative-stage-gate-top-2"></span>
+                  </div>
+                  <div
+                    class="initiative-stage-gate-box initiative-stage-gate-item-notstarted-text"
+                  >
+                    <span class="initiative-stage-gate-box-1"
+                      >Stage 4: Scale Up</span
+                    >
+                    <span class="initiative-stage-gate-box-2">...</span>
+                    <div class="initiative-stage-gate-box-gate">
+                      <div class="initiative-stage-gate-box-gate-diamond"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="initiative-stage-gate-top">
+                    <span class="initiative-stage-gate-top-1">Gate 5:</span>
+                    <span class="initiative-stage-gate-top-2"> -</span>
+                  </div>
+                  <div
+                    class="initiative-stage-gate-box initiative-stage-gate-item-notstarted-text"
+                  >
+                    <span class="initiative-stage-gate-box-1"
+                      >Stage 5: Pre-Launch</span
+                    >
+                    <span class="initiative-stage-gate-box-2">...</span>
+                    <div class="initiative-stage-gate-box-gate">
+                      <div class="initiative-stage-gate-box-gate-diamond"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="initiative-stage-gate-top">
+                    <span class="initiative-stage-gate-top-1"
+                      >Go to Launch</span
+                    >
+                    <span class="initiative-stage-gate-top-2"> -</span>
+                  </div>
+                  <div
+                    class="initiative-stage-gate-box initiative-stage-gate-box-last initiative-stage-gate-item-notstarted-text"
+                  >
+                    <span class="initiative-stage-gate-box-1"
+                      >Stage 6: Launch Review</span
+                    >
+                    <span class="initiative-stage-gate-box-2">...</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container-fluid">
+        <div class="gc-ci-content">
+          <div class="test-content">
+            <div class="row">
+              <div class="col-lg-12 col-sm-12">
+                <div class="gc-ci-content-title">START: IDEA APPROVAL</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--====== CONTAINER PART END ======-->
+
+    <!--#############JS###############-->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./assets/lib/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="./assets/kendoui.for.jquery.2022.1.119.commercial/js/kendo.all.min.js"></script>
+    <script src="./assets/js/gc-ci.js"></script>
+  </body>
+</html>

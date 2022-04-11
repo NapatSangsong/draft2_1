@@ -194,9 +194,13 @@ body{
     margin: 0;
     padding: 0;
 }
+.sidebarActive.zoom-in-out-box {
+    margin-left: 4px;
+    top: 1px;
+    position: relative;
+}
 .gc-ci-top-information-control li{
-
-    padding-left:15px;
+    padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 2px;
     padding-top: 2px;
@@ -206,6 +210,12 @@ body{
     cursor: pointer;
     transition: all .2s ease-in;
     font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 .gc-ci-top-information-control li:hover{
     background-color: #0057B8;
@@ -708,3 +718,27 @@ ul.gc-content-quick-link-ul {
         font-size: 56px;
     }
  }
+
+
+
+ /* animate */
+
+ .zoom-in-out-box {
+    animation: zoom-in-zoom-out 1s ease infinite;
+
+     color:var(--text-red);
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.4, 1.4);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
