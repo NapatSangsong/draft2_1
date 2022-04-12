@@ -472,6 +472,7 @@ span.initiative-stage-gate-box-2 {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    width:100%;
 }
 .initiative-stage-gate-top-1-inprogress{
     color: #4FB3DD !important;
