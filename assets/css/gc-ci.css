@@ -195,12 +195,13 @@ body{
     min-height: 212px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     z-index: 200;
-    top: 71px;
+    top: 50px;
+    padding-top: 5px;
 }
 .gc-ci-content{
     position: relative;
-    top: 305px;
-    height: calc(100vh - 310px);
+    top: 265px;
+    height: calc(100vh - 265px);
     overflow-y: scroll;
     width: 100%;
     padding:15px;
@@ -259,6 +260,7 @@ body{
     align-content: center;
     justify-content: center;
     align-items: center;
+    line-height: 12px;
 }
 .gc-ci-top-information-control li:hover{
     background-color: #0057B8;
@@ -418,6 +420,9 @@ ul.initiative-stage-gate {
 }
 .initiative-stage-gate-top{
     font-size: 16px;
+     text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .initiative-stage-gate-bottom {
     position: absolute;
@@ -441,8 +446,8 @@ ul.initiative-stage-gate {
     border-color: #D9D9D6;
     background-color:#F5F5F5;
     padding:10px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .initiative-stage-gate-box-first{
      border-left: 2px solid;
@@ -478,7 +483,7 @@ span.initiative-stage-gate-box-2 {
     margin: 0;
 }
 nav{
-    height: 72px;
+    height: 50px;
 }
 .navbar-fixed-top{
     position: fixed;
@@ -513,7 +518,7 @@ nav.navbar {
     padding-right: 10px;
 }
 nav.navbar.navbar-expand-lg.navbar-light.bg-white {
-    height: auto;
+    /* height: auto; */
     /* border: 1px solid red; */
 }
 a#navbarDropdownRecentProject {
@@ -535,7 +540,7 @@ a.navbar-brand {
     font-weight: 600;
 }
 div#navbarSupportedContent {
-    margin-top: 16px;
+    margin-top: 10px;
 }
 .dropdown-toggle::after{
     /* content: '\f078';
@@ -589,8 +594,8 @@ div#navbarSupportedContent {
     border-top-left-radius: 37px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 2%;
-    font-size: 1.3em;
-    line-height: 1.2em;
+    font-size: 26px;
+    line-height: 26px;
     color: #fff;
     transition: all .2s ease-out;
     margin-bottom: 20px;
@@ -707,19 +712,37 @@ ul.gc-content-quick-link-ul {
 }
 .initiative-informaion-top li{
     display:flex;
-    margin-right: 20px;
+    margin-right: 15px;
+    min-width: 210px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.initiative-informaion-top li:last-child{
+    display:flex;
+    margin-right: 15px;
+    min-width: 180px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .initiative-informaion-top-text{
     font-family: 'db_heavent_bd';
     font-weight: bold;
     margin-right: 5px;
     min-width: fit-content;
+     text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .initiative-informaion-top-value{
     font-family: 'db_heavent';
     font-weight: 200;
     margin-right: 5px;
-     min-width: fit-content;
+     min-width: auto;
+     text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 /* top information */
 
