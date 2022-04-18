@@ -2,6 +2,7 @@ $("document").ready(function () {
   // ==== Preloader
   setTimeout(fadeout, 1000);
   initMenu();
+  initSlideBar();
 });
 
 function fadeout() {
@@ -31,4 +32,21 @@ function initMenu() {
   });
   $("#wrapper").toggleClass("toggled-2");
   $("#menu ul").hide();
+}
+function initSlideBar() {
+  $(".fa-stack-1x")
+    .not(".fa-stack-1x-collapse")
+    .kendoTooltip({
+      content: function (e) {
+        var target = e.target; // the element for which the tooltip is shown
+        var textshow =
+          $(target).parent().parent().text() != ""
+            ? $(target).parent().parent().text()
+            : "";
+        return textshow; // set the element text as content of the tooltip
+      },
+      show: function (e) {},
+      hide: function (e) {},
+      position: "right",
+    });
 }
