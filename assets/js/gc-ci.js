@@ -39,11 +39,8 @@ function initSlideBar() {
     .kendoTooltip({
       content: function (e) {
         var target = e.target; // the element for which the tooltip is shown
-        var textshow =
-          $(target).parent().parent().text() != ""
-            ? $(target).parent().parent().text()
-            : "";
-        return textshow; // set the element text as content of the tooltip
+
+        return $(target).parent().parent().text(); // set the element text as content of the tooltip
       },
       show: function (e) {},
       hide: function (e) {},
